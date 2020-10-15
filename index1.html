@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+<html>
+<title> Kalculator Exit Policy</title>
+ <style>
+table {
+  border-collapse: collapse;
+}
+
+table,td{
+  border: 1px solid blue;
+}
+
+body {padding:30px}
+.print-area {border:1px solid red;padding:1em;margin:0 0 1em}
+</style>
+
+<body>
+<center>
+ <!--Heading untuk Kalkulator Exit Policy-->
+ <h2>KALKULATOR DASAR PEMISAH <i>EXIT POLICY<i> </h2>
+<!--Heading untuk Maklumat Pegawai-->
+ <h3>Maklumat Pegawai</h3> 
+
+ <!--Jadual Maklumat Pegawai-->
+ <form id="form" action = "result">
+  <table border="1" bgcolor="#dfe5eb">
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Nama 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         <input type = "text" id = "txtName" width="555" maxlength="200" size="40"/> <br>
+      </td>
+    </tr>
+     <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+        <label>No Kad Pengenalan <br> </label>
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         <input type = "text" id = "txtIc" maxlength="14" width="555" maxlength="200" size="40" placeholder="000000-00-0000"/> <br>
+      </td>
+    </tr>
+     <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+          <label for="gred">Skim/Gred</label>
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+          <select  id="txtGred">
+              <option value="Gred 1">Gred 1</option>
+              <option value="Gred 2">Gred 2</option>
+              <option value="Gred 3">Gred 3</option>
+              <option value="Gred 4">Gred 4</option>
+              <option value="Gred 5">Gred 5</option>
+              <option value="Gred 6">Gred 6</option>
+              <option value="Gred 7">Gred 7</option>
+              <option value="Gred 8">Gred 8</option>
+              <option value="Gred 9">Gred 9</option>
+              <option value="Gred 10">Gred 10</option>
+              <option value="Gred 11">Gred 11</option>
+              <option value="Gred 12">Gred 12</option>
+              <option value="Gred 13">Gred 13</option>
+              <option value="Gred 14">Gred 14</option>
+              <option value="Gred 15">Gred 15</option>
+              <option value="Gred 16">Gred 16</option>
+              <option value="Gred 17">Gred 17</option>
+              <option value="Gred 18">Gred 18</option>
+              <option value="Gred 19">Gred 19</option>
+              <option value="Gred 20">Gred 20</option>
+              <option value="Gred 21">Gred 21</option>
+              <option value="Gred 22">Gred 22</option>
+              <option value="Gred 23">Gred 23</option>
+              <option value="Gred 24">Gred 24</option>
+              <option value="Gred 25">Gred 25</option>
+              <option value="Gred 26">Gred 26</option>
+              <option value="Gred 27">Gred 27</option>
+              <option value="Gred 28">Gred 28</option>
+              <option value="Gred 29">Gred 29</option>
+              <option value="Gred 30">Gred 30</option>
+              <option value="Gred 31">Gred 31</option>
+              <option value="Gred 32">Gred 32</option>
+              <option value="Gred 33">Gred 33</option>
+              <option value="Gred 34">Gred 34</option>
+              <option value="Gred 35">Gred 35</option>
+              <option value="Gred 36">Gred 36</option>
+              <option value="Gred 37">Gred 37</option>
+              <option value="Gred 38">Gred 38</option>
+              <option value="Gred 39">Gred 39</option>
+              <option value="Gred 40">Gred 40</option>
+              <option value="Gred 41">Gred 41</option>
+              <option value="Gred 42">Gred 42</option>
+              <option value="Gred 43">Gred 43</option>
+              <option value="Gred 44">Gred 44</option>
+              <option value="Gred 45">Gred 45</option>
+              <option value="Gred 46">Gred 46</option>
+              <option value="Gred 47">Gred 47</option>
+              <option value="Gred 48">Gred 48</option>
+              <option value="Gred 49">Gred 49</option>
+              <option value="Gred 50">Gred 50</option>
+              <option value="Gred 51">Gred 51</option>
+              <option value="Gred 52">Gred 52</option>
+              <option value="Gred 53">Gred 53</option>
+              <option value="Gred 54">Gred 54</option>
+          </select>
+      </td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Unit/ Jabatan/ Kementerian: 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+        <textarea id="txtJab" rows="4" cols="50"></textarea>
+      </td>
+    </tr>
+     <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Tarikh Lahir: 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         <input type = "text" id="txtLahir1"  maxlength="2" value="00" size="2">
+                &nbsp;/
+        <input type = "text" id="txtLahir2"  maxlength="2" value="00" size="2">
+                &nbsp;/
+        <input type = "text" id="txtLahir3"  maxlength="4" value="0000" size="4">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Tarikh Mula Berkhidmat: 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         <input type = "text" id="txtKhid1"  maxlength="2" value="00" size="2">
+                &nbsp;/
+        <input type = "text" id="txtKhid2"  maxlength="2" value="00" size="2">
+                &nbsp;/
+        <input type = "text" id="txtKhid3"  maxlength="4" value="0000" size="4">
+      </td>
+    </tr>
+     <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Umur Persaraan 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+            
+
+
+            <select id="txtUmurPersaraan">
+              <option value="55">55 Tahun</option>
+              <option value="56">56 Tahun</option>
+              <option value="58">58 Tahun</option>
+              <option value="60">60 Tahun</option>
+             </select>
+              
+      </td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Cuti Tanpa Gaji 
+      </td>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Tahun
+      </td>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Bulan
+      </td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         
+      </td>
+
+      <td  bgcolor="#dfe5eb" height="20">
+         <input type = "text" id="txtCutiTanpa2" value="0" >
+              
+      </td>
+      <td  bgcolor="#dfe5eb" height="20">
+         <input type = "text" id="txtCutiTanpa1" value="0" >
+              
+      </td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Gantian Cuti Rehat (Maksima 150 Hari) 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         <input type = "text" id="txtCutiRehat" maxlength="3" value="0" >
+              
+      </td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Tarikh Dijangka Tamat Perkhidmatan: 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         <input type = "text" id="txtTamat1"  maxlength="2" value="00" size="2">
+                &nbsp;/
+        <input type = "text" id="txtTamat2"  maxlength="2" value="00" size="2">
+                &nbsp;/
+        <input type = "text" id="txtTamat3"  maxlength="4" value="0000" size="4">
+      </td>
+    </tr>
+    
+  
+ </table>
+<br>
+<!--Jadual Maklumat Pegawai-->
+ <table border="1">
+   
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Gaji Akhir (Hakiki) Semasa Tarikh Pesaraan Pilihan: 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         RM <input type = "text" id="txtGaji"  value="0" >  
+      </td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Imbuhan Tetap Jawatan Utama/Khas (ITJU/K) <p style="color:red; font-size:11px;" > Jika keatas </p>
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         RM <input type = "text" id = "txtItju" width="555" maxlength="200" size="20" value="0"/> <br>
+      </td>
+    </tr>
+    
+
+  </table>
+  <!--button-->
+  <input type = "button"value = "Kira" onclick = "saySubmit()"/>
+
+  
+ </form>
+
+
+<!--Jadual Keputusan<input type="button" value="Print" onclick="printPage('content');"></input> -->
+<script>
+
+ function saySubmit(){
+
+  //declare input variable
+  var txtName = document.getElementById("txtName");
+  var txtItju = document.getElementById("txtItju");
+  var txtIc = document.getElementById("txtIc");
+  var txtGred = document.getElementById("txtGred");
+  var txtJab = document.getElementById("txtJab");
+  var txtLahir1 = document.getElementById("txtLahir1");
+  var txtLahir2 = document.getElementById("txtLahir2");
+  var txtLahir3 = document.getElementById("txtLahir3");
+  var txtKhid1 = document.getElementById("txtKhid1");
+  var txtKhid2 = document.getElementById("txtKhid2");
+  var txtKhid3 = document.getElementById("txtKhid3");
+  var txtGaji = document.getElementById("txtGaji");
+  var txtUmurPersaraan = document.getElementById("txtUmurPersaraan");
+  var txtCutiTanpa1 = document.getElementById("txtCutiTanpa1");
+  var txtCutiTanpa2 = document.getElementById("txtCutiTanpa2");
+  var txtCutiRehat = document.getElementById("txtCutiRehat");
+  var txtTamat1 = document.getElementById("txtTamat1");
+  var txtTamat2 = document.getElementById("txtTamat2");
+  var txtTamat3 = document.getElementById("txtTamat3");
+ 
+  
+
+
+  //declare output variable
+  var txtOutputItp = document.getElementById("txtOutputItp");
+  var txtOutputItju = document.getElementById("txtOutputItju");
+  var txtOutputItk = document.getElementById("txtOutputItk");
+  var txtOutputItka = document.getElementById("txtOutputItka");
+  var txtOutputGred = document.getElementById("txtOutputGred");
+  var txtOutputIc = document.getElementById("txtOutputIc");
+  var txtOutputName = document.getElementById("txtOutputName");
+  var txtOutputJab = document.getElementById("txtOutputJab");
+  var txtOutputLahir1 = document.getElementById("txtOutputLahir1");
+  var txtOutputLahir2 = document.getElementById("txtOutputLahir2");
+  var txtOutputLahir3 = document.getElementById("txtOutputLahir3");
+  var txtOutputKhid1 = document.getElementById("txtOutputKhid1");
+  var txtOutputKhid2 = document.getElementById("txtOutputKhid2");
+  var txtOutputKhid3 = document.getElementById("txtOutputKhid3");
+  var txtOutputGaji = document.getElementById("txtOutputGaji");
+  var txtOutputUmurPersaraan = document.getElementById("txtOutputUmurPersaraan");
+  var txtOutputCutiTanpa1 = document.getElementById("txtOutputCutiTanpa1");
+  var txtOutputCutiTanpa2 = document.getElementById("txtOutputCutiTanpa2");
+  var txtOutputCutiRehat = document.getElementById("txtOutputCutiRehat");
+  var txtOutputTamat1 = document.getElementById("txtOutputTamat1");
+  var txtOutputTamat2 = document.getElementById("txtOutputTamat2");
+  var txtOutputTamat3 = document.getElementById("txtOutputTamat3");
+  var txtOutputBulankira = document.getElementById("txtOutputBulankira");
+  var txtOutputPencen = document.getElementById("txtOutputPencen");
+  var txtOutputGanjaran = document.getElementById("txtOutputGanjaran");
+  var txtOutputGajiImbuhan = document.getElementById("txtOutputGajiImbuhan");
+
+  
+
+ 
+  //Parse Variable
+  var name = txtName.value;
+  var Itju = parseInt(txtItju.value);
+  var ic = txtIc.value;
+  var gred = txtGred.value;
+  var jab = txtJab.value;
+  var lahir1 = parseInt(txtLahir1.value);
+  var lahir2 = parseInt(txtLahir2.value);
+  var lahir3 = parseInt(txtLahir3.value);
+  var khid1 = parseInt(txtKhid1.value);
+  var khid2 = parseInt(txtKhid2.value);
+  var khid3 = parseInt(txtKhid3.value);
+  var gaji = parseFloat(txtGaji.value);
+  var umurpersaraan = parseInt(txtUmurPersaraan.value);
+  var cutitanpa1 = parseInt(txtCutiTanpa1.value);
+  var cutitanpa2 = parseInt(txtCutiTanpa2.value);
+  var cutirehat = parseInt(txtCutiRehat.value);
+  var tamat1 = parseInt(txtTamat1.value);
+  var tamat2 = parseInt(txtTamat2.value);
+  var tamat3 = parseInt(txtTamat3.value);
+
+
+  
+ 
+
+  //Calculation
+  
+  //Kiraan Gaji Imbuhan
+  Tarikhbersara = lahir3 + umurpersaraan;
+  if (gred == "Gred 17" || gred == "Gred 18" || gred == "Gred 19" || gred == "Gred 20" || gred == "Gred 21" || gred == "Gred 22" || gred == "Gred 23" || gred == "Gred 24")
+  {
+    Itka = 115;
+    Itk = 0;
+    Itp = 300;
+  }
+  else if (gred == "Gred 25" || gred == "Gred 26")
+  {
+    Itka = 140;
+    Itk = 0;
+    Itp = 300;
+  }
+  else if (gred == "Gred 27" || gred ==  "Gred 28" || gred == "Gred 29" || gred == "Gred 30" || gred == "Gred 31" || gred == "Gred 32" || gred == "Gred 33" || gred == "Gred 34")
+  {
+    Itka = 160;
+    Itk = 0;
+    Itp = 300;
+  }
+  else if (gred == "Gred 35" || gred == "Gred 36" || gred == "Gred 37" || gred == "Gred 38" || gred == "Gred 39" || gred == "Gred 40") 
+  {
+    Itka = 220;
+    Itk = 0;
+    Itp = 300;
+  }
+  else if (gred == "Gred 41" || gred ==  "Gred 42")
+  {
+      Itka =300;
+      Itk = 0;
+      Itp = 300;
+  }
+ else if (gred ==  "Gred 45")
+  {
+      Itka =300;
+      Itk = 0;
+      Itp = 700;
+  }
+   else if (gred == "Gred 53" || gred ==  "Gred 54")
+  {
+      Itka =0;
+      Itk = 800;
+      Itp = 900;
+  }
+  else if (gred == "Gred 51" || gred ==  "Gred 52")
+  {
+      Itka =0;
+      Itk = 600;
+      Itp = 700;
+  }
+  else if (gred == "Gred 46" || gred == "Gred 47" || gred ==  "Gred 48" || gred == "Gred 49" || gred ==  "Gred 50")
+  {
+      Itka =0;
+      Itk = 550;
+      Itp = 700;
+  }
+  else if (gred == "Gred 43" || gred ==  "Gred 44")
+  {
+      Itka =0;
+      Itk = 400;
+      Itp = 400;
+  }
+
+  else
+  {
+    Itk =0;
+    Itka = 95;
+    Itp = 300;
+  }
+  
+  //output imbuhan
+  txtOutputItka.value = Itka;
+  txtOutputItk.value = Itk;
+  txtOutputItp.value = Itp;
+
+  //Kiraan Gaji dan Imbuhan
+  gajitotal = gaji+Itka+Itp+Itk+Itju;
+  //Kiraan Gaji Imbuhan
+  if (cutirehat <= 150)
+  {
+    gajiImbuhan = (1/30)*cutirehat *(gajitotal);
+  }
+
+  txtOutputGajiImbuhan.value = gajitotal;
+ 
+
+//Kiraan Jumlah Perkhidmatan Bulan
+   minusbulan=0;
+   minustahun=0;
+   plusbulan=0;
+
+if (tamat1<khid1) 
+  {
+    minusbulan=1;
+  }
+
+if ((tamat2-minusbulan)<khid2)
+  { 
+    minustahun=1; 
+    plusbulan=12; 
+  }
+
+tbk=tamat2-minusbulan+plusbulan-khid2;
+ttk=tamat3-minustahun-khid3; 
+
+bulan_cuti_tg = (cutitanpa2*12)+cutitanpa1;
+
+bulankira=((ttk*12)+tbk)-bulan_cuti_tg;
+
+//kiraan Pencen
+Pencen=(1/600)*bulankira*gaji;
+
+//kiraan Ganjaran
+Ganjaran=0.075*bulankira*gaji;
+
+  //Output Pencen
+  txtOutputGanjaran.value = Ganjaran.toFixed(2);
+
+  //Output Pencen
+  txtOutputPencen.value = Pencen.toFixed(2);
+
+  //Output Jumlah Perkhidmatan
+  txtOutputBulankira.value = bulankira;
+
+  //Output kiraan Gaji Imbuhan
+  txtOutputGajiResult.value = gajiImbuhan.toFixed(2);
+ 
+ 
+ 
+  //Output
+  txtOutputName.value = name;
+  txtOutputItp.value = Itp;
+  txtOutputItk.value = Itk;
+  txtOutputItju.value = Itju;
+  txtOutputIc.value = ic;
+  txtOutputGred.value = gred;
+  txtOutputJab.value = jab;
+  txtOutputLahir1.value = lahir1;
+  txtOutputLahir2.value = lahir2;
+  txtOutputLahir3.value = lahir3;
+  txtOutputKhid1.value = khid1;
+  txtOutputKhid2.value = khid2;
+  txtOutputKhid3.value = khid3;
+  txtOutputGaji.value = gaji;
+  txtOutputUmurPersaraan.value = Tarikhbersara;
+  txtOutputCutiTanpa1.value = cutitanpa1;
+  txtOutputCutiTanpa2.value = cutitanpa2;
+  txtOutputCutiRehat.value = cutirehat;
+  txtOutputTamat1.value = tamat1 + tamat2;
+  txtOutputTamat2.value = tamat2;
+  txtOutputTamat3.value = tamat3;
+}
+
+function printPage(id)
+{
+   var html="<html>";
+   html+= document.getElementById(id).innerHTML;
+   html+="</html>";
+
+   var printWin = window.open("", "myWindow", "width=2000, height=1000");
+   printWin.document.write(html);
+   printWin.document.close();
+   printWin.focus();
+   printWin.print();
+   printWin.close();
+}
+</script>
+
+
+       
+       <form action = "" id="result">
+       <div id="content">
+  <!--Jadual Keputusan-->
+  <table border="1">
+    <tr colspan="4">
+      <td  bgcolor="#0099ff">
+       <font face="Verdana" size="2"> <b>Nama</b> </font>
+      </td>
+      <td colspan="3"  bgcolor="#0099ff">
+         <font face="Verdana" size="1"><input type = "text" id = "txtOutputName" size="40" disabled/></font> </input>
+      </td>
+    <tr>
+      <td bgcolor="#99d6ff">
+        <font face="Verdana" size="2"> <b>No Kad Pengenalan</b> </font>
+        
+      </td>
+      <td colspan="3" bgcolor="#99d6ff">
+         <input type = "text" id = "txtOutputIc" size="40" disabled/>
+      </td>
+    </tr>
+    <tr>
+      <td  bgcolor="#0099ff">
+         <font face="Verdana" size="2"> <b>Skim/Gred</b> </font>
+      </td>
+      <td colspan="3" bgcolor="#0099ff">
+         <input type = "text" id = "txtOutputGred" disabled/>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#99d6ff">
+        <font face="Verdana" size="2"> <b>Unit/ Jabatan/ Kementerian</b> </font>
+      </td>
+      <td colspan="3" bgcolor="#99d6ff">
+         <textarea id="txtOutputJab" rows="4" cols="30" disabled></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td  bgcolor="#0099ff">
+        <font face="Verdana" size="2"> <b>Tarikh Bersara Wajib</b> </font>
+      </td>
+      <td  bgcolor="#0099ff">
+             <input type = "text" id = "txtOutputLahir1" size="2" disabled/>
+             <input type = "text" id = "txtOutputLahir2" size="2" disabled/>
+             <input type = "text" id = "txtOutputUmurPersaraan" size="4" disabled/>
+      </td>
+      <td bgcolor="#0099ff">
+        <font face="Verdana" size="2"> <b>Genap Bulan Perkhidmatan</b> </font> 
+      </td>
+      <td bgcolor="#0099ff">
+         <input type = "text" id = "txtOutputBulankira" size="5" disabled/> <font face="Verdana" size="2"> <b>Bulan</b> </font> 
+      </td>
+
+    </tr>
+    <tr>
+      <td bgcolor="#99d6ff">
+       <font face="Verdana" size="2"> <b>Imbuhan Tetap Khidmat Awam (ITKA)</b> </font>  
+      </td>
+      <td bgcolor="#99d6ff">
+          <font face="Verdana" size="2"> <b>RM</b> </font> <input type = "text" id = "txtOutputItka" size="7" disabled />
+      </td>
+      <td bgcolor="#99d6ff">
+        <font face="Verdana" size="2"> <b>Gaji Akhir dan Imbuhan</b> </font> 
+      </td>
+      <td bgcolor="#99d6ff">
+         <font face="Verdana" size="2"> <b>RM </b> </font> <input type = "text" id = "txtOutputGajiImbuhan" size="7" disabled/>
+      </td>
+      
+    </tr>
+    <tr>
+      <td bgcolor="#0099ff" width=280>
+        <font face="Verdana" size="2"> <b>Imbuhan Tetap Perumahan (ITP)</b> </font> 
+      </td>
+      <td bgcolor="#0099ff">
+         <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputItp" size="7" disabled />
+      </td>
+      <td bgcolor="#0099ff" width=280>
+        <font face="Verdana" size="2"> <b>Jumlah Gantian Cuti Rehat</b> </font> 
+      </td>
+      <td  bgcolor="#0099ff" >
+        <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputGajiResult" size="7" disabled/>
+      </td>
+      
+    </tr>
+    <tr>
+      <td bgcolor="#99d6ff">
+        <font face="Verdana" size="2"> <b>Imbuhan Tetap Keraian (ITK)</b> </font> 
+      </td>
+      <td bgcolor="#99d6ff">
+         <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputItk" size="7" disabled/>
+         <td  bgcolor="#99d6ff">
+        <font face="Verdana" size="2"> <b>Jumlah Ganjaran</b> </font> 
+      </td>
+      <td bgcolor="#99d6ff">
+         <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputGanjaran" size="7" disabled/>
+      </td>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#0099ff">
+        <font face="Verdana" size="2"> <b>Imbuhan Tetap Jawatan Utama/Khas (ITJU/K)</b> </font> 
+      </td>
+      <td bgcolor="#0099ff">
+        <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputItju" size="7" disabled/>
+      </td>
+      <td bgcolor="#0099ff">
+        <font face="Verdana" size="2"> <b>Jumlah Pencen Bulanan</b> </font> 
+      </td>
+      <td bgcolor="#008ae6">
+         <font face="Verdana" size="2"> <b>RM</b> </font> <input type = "text" id = "txtOutputPencen" size="7" disabled/>
+      </td>
+      
+    </tr>
+
+  
+   
+   
+     
+   
+   
+   <input type = "text" id = "txtOutputKhid1" hidden />
+   <input type = "text" id = "txtOutputKhid2" hidden/>
+   <input type = "text" id = "txtOutputKhid3" hidden/>
+   <input type = "text" id = "txtOutputGaji" hidden/>
+   <input type = "text" id = "txtOutputLahir3" hidden/>
+   <input type = "text" id = "txtOutputCutiTanpa1" hidden/>
+   <input type = "text" id = "txtOutputCutiTanpa2" hidden/>
+   <input type = "text" id = "txtOutputCutiRehat" hidden/>
+
+   
+   <input type = "text" id = "txtOutputTamat1" hidden/>
+   
+
+   
+  <p id="GajiImbuhan"></p>
+   
+
+
+ </table>
+</form>
+<button onclick="window.print()">Print this page</button>
+       </div>
+  
+</div>
+
+ </div>
+
+      
+
+</body>
+</html>

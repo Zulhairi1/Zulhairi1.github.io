@@ -1,8 +1,21 @@
-
 <!DOCTYPE html>
 <html>
-<title> Kalculator Exit Policy</title>
  <style>
+  .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {font-size: 14px;background-color: #008CBA;}
+
+
 table {
   border-collapse: collapse;
 }
@@ -14,16 +27,17 @@ table,td{
 body {padding:30px}
 .print-area {border:1px solid red;padding:1em;margin:0 0 1em}
 </style>
-
-<body>
+<title>Kalkulator Dasar Pemisah</title>
+<body bgcolor="#142b61">
 <center>
  <!--Heading untuk Kalkulator Exit Policy-->
- <h2>KALKULATOR DASAR PEMISAH <i>EXIT POLICY<i> </h2>
+
+ <h2 style="color:white;" >KALKULATOR DASAR PEMISAH</h2>
 <!--Heading untuk Maklumat Pegawai-->
- <h3>Maklumat Pegawai</h3> 
+ <h3 style="color:white;">Maklumat Pegawai</h3> 
 
  <!--Jadual Maklumat Pegawai-->
- <form id="form" action = "result">
+ <form id="form" name="myForm" onsubmit="return saySubmit()">
   <table border="1" bgcolor="#dfe5eb">
     <tr>
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
@@ -109,7 +123,7 @@ body {padding:30px}
          Unit/ Jabatan/ Kementerian: 
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-        <textarea id="txtJab" rows="4" cols="50"></textarea>
+        <textarea id="txtJab" rows="4" cols="50" placeholder="Jabatan Perkhidmatan Awam"></textarea>
       </td>
     </tr>
      <tr>
@@ -117,11 +131,11 @@ body {padding:30px}
          Tarikh Lahir: 
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         <input type = "text" id="txtLahir1"  maxlength="2" value="00" size="2">
+         <input type = "text" id="txtLahir1"  maxlength="2" size="2" placeholder="00">
                 &nbsp;/
-        <input type = "text" id="txtLahir2"  maxlength="2" value="00" size="2">
+        <input type = "text" id="txtLahir2"  maxlength="2"  size="2" placeholder="00">
                 &nbsp;/
-        <input type = "text" id="txtLahir3"  maxlength="4" value="0000" size="4">
+        <input type = "text" id="txtLahir3"  maxlength="4"  size="4" placeholder="0000">
       </td>
     </tr>
     <tr>
@@ -129,11 +143,11 @@ body {padding:30px}
          Tarikh Mula Berkhidmat: 
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         <input type = "text" id="txtKhid1"  maxlength="2" value="00" size="2">
+         <input type = "text" id="txtKhid1"  maxlength="2" size="2" placeholder="00">
                 &nbsp;/
-        <input type = "text" id="txtKhid2"  maxlength="2" value="00" size="2">
+        <input type = "text" id="txtKhid2"  maxlength="2" size="2" placeholder="00">
                 &nbsp;/
-        <input type = "text" id="txtKhid3"  maxlength="4" value="0000" size="4">
+        <input type = "text" id="txtKhid3"  maxlength="4" size="4" placeholder="0000">
       </td>
     </tr>
      <tr>
@@ -208,7 +222,7 @@ body {padding:30px}
    
     <tr>
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
-         Gaji Akhir (Hakiki) Semasa Tarikh Pesaraan Pilihan: 
+         Gaji Akhir (Hakiki): 
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
          RM <input type = "text" id="txtGaji"  value="0" >  
@@ -226,7 +240,7 @@ body {padding:30px}
 
   </table>
   <!--button-->
-  <input type = "button"value = "Kira" onclick = "saySubmit()"/>
+  <input type = "button"value = "Kira" onclick = "saySubmit()"/ class="button button1">
 
   
  </form>
@@ -236,6 +250,124 @@ body {padding:30px}
 <script>
 
  function saySubmit(){
+
+  //Validation untuk nama
+  var nama1 = document.forms["myForm"]["txtName"].value;
+  if (nama1 == "")
+  {
+    alert("Sila isi Nama");
+    return false;
+  }
+
+  //Validation untuk No kad pengenalan
+  var ic1 = document.forms["myForm"]["txtIc"].value;
+  if (ic1 == "")
+  {
+    alert("Sila isi No Kad Pengenalan");
+    return false;
+  }
+
+  //Validation untuk No kad pengenalan
+  var jab1 = document.forms["myForm"]["txtJab"].value;
+  if (jab1 == "")
+  {
+    alert("Sila isi Jabatan");
+    return false;
+  }
+
+  //Validation untuk tarikh lahir hari
+  var lahirs1 = document.forms["myForm"]["txtLahir1"].value;
+  if (lahirs1 == "")
+  {
+    alert("Sila isi Tarikh Lahir Hari");
+    return false;
+  }
+
+  //Validation untuk tarikh lahir bulan
+  var lahirs2 = document.forms["myForm"]["txtLahir2"].value;
+  if (lahirs2 == "")
+  {
+    alert("Sila isi Tarikh Lahir Bulan");
+    return false;
+  }
+
+  //Validation untuk tarikh lahir tahun
+  var lahirs3 = document.forms["myForm"]["txtLahir3"].value;
+  if (lahirs3 == "")
+  {
+    alert("Sila isi Tarikh Lahir Tahun");
+    return false;
+  }
+
+  //Validation untuk tarikh perkhidmatan hari
+  var khids1 = document.forms["myForm"]["txtKhid1"].value;
+  if (khids1 == "")
+  {
+    alert("Sila isi Tarikh Berkhidmat Hari");
+    return false;
+  }
+
+  //Validation untuk tarikh perkhidmatan bulan
+  var khids2 = document.forms["myForm"]["txtKhid2"].value;
+  if (khids2 == "")
+  {
+    alert("Sila isi Tarikh Berkhidmat Bulan");
+    return false;
+  }
+
+  //Validation untuk tarikh perkhidmatan tahun
+  var khids3 = document.forms["myForm"]["txtKhid3"].value;
+  if (khids3 == "")
+  {
+    alert("Sila isi Tarikh Berkhidmat Tahun");
+    return false;
+  }
+
+   // Validation untuk CUTI REHAT
+  var x = document.forms["myForm"]["txtCutiRehat"].value;
+
+  if ( x < 0 || x > 150) 
+  {
+    alert ("Cuti Rehat melebihi 150 hari");
+    return false;
+  }
+  else if (x == "")
+  {
+     alert("Sila isi Cuti Rehat dengan betul");
+     return false;
+  }
+
+  // Validation untuk Gaji
+  var gaji1 = document.forms["myForm"]["txtGaji"].value;
+  if (gaji1 == "")
+  {
+    alert("Sila isi Gaji");
+    return false;
+  }
+
+  //Validation untuk tarikh tamat perkhidmatan hari
+  var tamats1 = document.forms["myForm"]["txtTamat1"].value;
+  if (tamats1 == "")
+  {
+    alert("Sila isi Tarikh Tamat Berkhidmat Hari");
+    return false;
+  }
+
+  //Validation untuk tarikh tamat perkhidmatan bulan
+  var tamats2 = document.forms["myForm"]["txtTamat2"].value;
+  if (tamats2 == "")
+  {
+    alert("Sila isi Tarikh Tamat Berkhidmat Bulan");
+    return false;
+  }
+
+  //Validation untuk tarikh tamat perkhidmatan tahun
+  var tamats3 = document.forms["myForm"]["txtTamat3"].value;
+  if (tamats3 == "")
+  {
+    alert("Sila isi Tarikh Berkhidmat Tahun");
+    return false;
+  }
 
   //declare input variable
   var txtName = document.getElementById("txtName");
@@ -628,7 +760,7 @@ function printPage(id)
 
  </table>
 </form>
-<button onclick="window.print()">Print this page</button>
+<button onclick="window.print()" class="button button1">Print this page</button>
        </div>
   
 </div>

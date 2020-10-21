@@ -25,8 +25,9 @@ table,td{
   border: 1px solid blue;
 }
 
-table,td{
-  border: 1px solid blue;
+.table1,.td1{
+  border: 3px solid white;
+  width: 50%; 
 }
 
 body {padding:30px}
@@ -36,11 +37,16 @@ body {padding:30px}
 <body bgcolor="#142b61">
 <center>
  <!--Heading untuk Kalkulator Exit Policy-->
-<table>
- <h2 style="color:white;" >KALKULATOR DASAR PEMISAH</h2>
+<table class="table1">
+	<center>
+	<td class="td1" colspan="3">
+ <h2 style="color:white;" align="center">KALKULATOR DASAR PEMISAH</h2>
 <!--Heading untuk Maklumat Pegawai-->
- <h3 style="color:white;">Maklumat Pegawai</h3> 
+ <h3 style="color:white;" align="center">Maklumat Pegawai</h3>
+</td>
+</center>
 </table>
+<br><br>
  <!--Jadual Maklumat Pegawai-->
  <form id="form" name="myForm" onsubmit="return saySubmit()">
   <table border="1" bgcolor="#dfe5eb">
@@ -60,9 +66,17 @@ body {padding:30px}
          <input type = "text" id = "txtIc" maxlength="14" width="555" maxlength="200" size="40" placeholder="000000-00-0000"/> <br>
       </td>
     </tr>
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+        <label>Skim <br> </label>
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         <input type = "text" id = "txtSkim" maxlength="14" width="555" maxlength="200" size="40" placeholder="DG"/> <br>
+      </td>
+    </tr>
      <tr>
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
-          <label for="gred">Skim/Gred</label>
+          <label for="gred">Gred</label>
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
           <select  id="txtGred">
@@ -386,6 +400,7 @@ body {padding:30px}
   var txtName = document.getElementById("txtName");
   var txtItju = document.getElementById("txtItju");
   var txtIc = document.getElementById("txtIc");
+  var txtSkim = document.getElementById("txtSkim");
   var txtGred = document.getElementById("txtGred");
   var txtJab = document.getElementById("txtJab");
   var txtLahir1 = document.getElementById("txtLahir1");
@@ -439,6 +454,7 @@ body {padding:30px}
   var name = txtName.value;
   var Itju = parseInt(txtItju.value);
   var ic = txtIc.value;
+  var skim = txtSkim.value;
   var gred = txtGred.value;
   var jab = txtJab.value;
   var lahir1 = parseInt(txtLahir1.value);
@@ -644,7 +660,8 @@ ganjaran=0.075*bulankira*gaji;
   //Output kiraan Gaji Imbuhan
   txtOutputGajiResult.value = gajiImbuhan.toFixed(2);
  
- 
+ //skim and gred
+  skimgred = skim + " "+ gred;
  
   //Output
   txtOutputName.value = name;
@@ -652,7 +669,7 @@ ganjaran=0.075*bulankira*gaji;
   txtOutputItk.value = Itk;
   txtOutputItju.value = Itju;
   txtOutputIc.value = ic;
-  txtOutputGred.value = gred;
+  txtOutputGred.value = skimgred;
   txtOutputJab.value = jab;
   txtOutputLahir1.value = lahir1;
   txtOutputLahir2.value = lahir2;
@@ -761,10 +778,10 @@ function printPage(id)
       <td bgcolor="#0099ff">
          <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputItp" size="7" disabled />
       </td>
-      <td bgcolor="#ffffcc" width=280>
+      <td bgcolor="#ccccff" width=280>
         <font face="Verdana" size="2"> <b>Jumlah Gantian Cuti Rehat</b> </font> 
       </td>
-      <td  bgcolor="#ffffcc" >
+      <td  bgcolor="#ccccff" >
         <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputGajiResult" size="7" disabled/>
       </td>
       
@@ -775,10 +792,10 @@ function printPage(id)
       </td>
       <td bgcolor="#99d6ff">
          <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputItk" size="7" disabled/>
-         <td  bgcolor="#99ff99">
+         <td  bgcolor="#99ff66">
         <font face="Verdana" size="2"> <b>Jumlah Ganjaran</b> </font> 
       </td>
-      <td bgcolor="#99ff99">
+      <td bgcolor="#99ff66">
          <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputGanjaran" size="7" disabled/>
       </td>
       </td>
@@ -790,10 +807,10 @@ function printPage(id)
       <td bgcolor="#0099ff">
         <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputItju" size="7" disabled/>
       </td>
-      <td bgcolor="#ff99ff">
+      <td bgcolor="#ff5050">
         <font face="Verdana" size="2"> <b>Jumlah Pencen Bulanan</b> </font> 
       </td>
-      <td bgcolor="#ff99ff">
+      <td bgcolor="#ff5050">
          <font face="Verdana" size="2"> <b>RM</b> </font> <input type = "text" id = "txtOutputPencen" size="7" disabled/>
       </td>
       

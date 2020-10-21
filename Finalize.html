@@ -25,6 +25,10 @@ table,td{
   border: 1px solid blue;
 }
 
+table,td{
+  border: 1px solid blue;
+}
+
 body {padding:30px}
 .print-area {border:1px solid red;padding:1em;margin:0 0 1em}
 </style>
@@ -32,11 +36,11 @@ body {padding:30px}
 <body bgcolor="#142b61">
 <center>
  <!--Heading untuk Kalkulator Exit Policy-->
-
+<table>
  <h2 style="color:white;" >KALKULATOR DASAR PEMISAH</h2>
 <!--Heading untuk Maklumat Pegawai-->
  <h3 style="color:white;">Maklumat Pegawai</h3> 
-
+</table>
  <!--Jadual Maklumat Pegawai-->
  <form id="form" name="myForm" onsubmit="return saySubmit()">
   <table border="1" bgcolor="#dfe5eb">
@@ -164,7 +168,7 @@ body {padding:30px}
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
          Umur Persaraan 
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td  bgcolor="#dfe5eb" width="385" height="20">
             
 
 
@@ -179,29 +183,14 @@ body {padding:30px}
     </tr>
     <tr>
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
-         Cuti Tanpa Gaji 
+         Cuti Tanpa Gaji (Maksima 360 Hari)
       </td>
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
-         Tahun
+         <input type = "text" id="txtCutiTanpa" value="0" >
       </td>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
-         Bulan
-      </td>
+      
     </tr>
-    <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
-         
-      </td>
-
-      <td  bgcolor="#dfe5eb" height="20">
-         <input type = "text" id="txtCutiTanpa2" value="0" >
-              
-      </td>
-      <td  bgcolor="#dfe5eb" height="20">
-         <input type = "text" id="txtCutiTanpa1" value="0" >
-              
-      </td>
-    </tr>
+    
     <tr>
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
          Gantian Cuti Rehat (Maksima 150 Hari) 
@@ -232,7 +221,7 @@ body {padding:30px}
    
     <tr>
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
-         Gaji Akhir (Hakiki): 
+         Gaji Akhir Diterima: 
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
          RM <input type = "text" id="txtGaji"  value="0" >  
@@ -347,6 +336,20 @@ body {padding:30px}
      return false;
   }
 
+  // Validation untuk CUTI REHAT
+  var y = document.forms["myForm"]["txtCutiTanpa"].value;
+
+  if ( y < 0 || y > 360) 
+  {
+    alert ("Cuti Tanpa Gaji melebihi 360 hari");
+    return false;
+  }
+  else if (y == "")
+  {
+     alert("Sila isi Cuti Tanpa Gaji dengan betul");
+     return false;
+  }
+
   // Validation untuk Gaji
   var gaji1 = document.forms["myForm"]["txtGaji"].value;
   if (gaji1 == "")
@@ -393,8 +396,7 @@ body {padding:30px}
   var txtKhid3 = document.getElementById("txtKhid3");
   var txtGaji = document.getElementById("txtGaji");
   var txtUmurPersaraan = document.getElementById("txtUmurPersaraan");
-  var txtCutiTanpa1 = document.getElementById("txtCutiTanpa1");
-  var txtCutiTanpa2 = document.getElementById("txtCutiTanpa2");
+  var txtCutiTanpa = document.getElementById("txtCutiTanpa");
   var txtCutiRehat = document.getElementById("txtCutiRehat");
   var txtTamat1 = document.getElementById("txtTamat1");
   var txtTamat2 = document.getElementById("txtTamat2");
@@ -420,8 +422,7 @@ body {padding:30px}
   var txtOutputKhid3 = document.getElementById("txtOutputKhid3");
   var txtOutputGaji = document.getElementById("txtOutputGaji");
   var txtOutputUmurPersaraan = document.getElementById("txtOutputUmurPersaraan");
-  var txtOutputCutiTanpa1 = document.getElementById("txtOutputCutiTanpa1");
-  var txtOutputCutiTanpa2 = document.getElementById("txtOutputCutiTanpa2");
+  var txtOutputCutiTanpa = document.getElementById("txtOutputCutiTanpa");
   var txtOutputCutiRehat = document.getElementById("txtOutputCutiRehat");
   var txtOutputTamat1 = document.getElementById("txtOutputTamat1");
   var txtOutputTamat2 = document.getElementById("txtOutputTamat2");
@@ -448,8 +449,7 @@ body {padding:30px}
   var khid3 = parseInt(txtKhid3.value);
   var gaji = parseFloat(txtGaji.value);
   var umurpersaraan = parseInt(txtUmurPersaraan.value);
-  var cutitanpa1 = parseInt(txtCutiTanpa1.value);
-  var cutitanpa2 = parseInt(txtCutiTanpa2.value);
+  var cutitanpa = parseInt(txtCutiTanpa.value);
   var cutirehat = parseInt(txtCutiRehat.value);
   var tamat1 = parseInt(txtTamat1.value);
   var tamat2 = parseInt(txtTamat2.value);
@@ -460,6 +460,8 @@ body {padding:30px}
  
 
   //Calculation
+
+ 
   
   //Kiraan Gaji Imbuhan
   Tarikhbersara = lahir3 + umurpersaraan;
@@ -620,7 +622,7 @@ if ((tamat2-minusbulan)<khid2)
 tbk=tamat2-minusbulan+plusbulan-khid2;
 ttk=tamat3-minustahun-khid3; 
 
-bulan_cuti_tg = (cutitanpa2*12)+cutitanpa1;
+bulan_cuti_tg = (cutitanpa/30);
 
 bulankira=((ttk*12)+tbk)-bulan_cuti_tg;
 
@@ -628,10 +630,10 @@ bulankira=((ttk*12)+tbk)-bulan_cuti_tg;
 Pencen=(1/600)*bulankira*gaji;
 
 //kiraan Ganjaran
-Ganjaran=0.075*bulankira*gaji;
+ganjaran=0.075*bulankira*gaji;
 
-  //Output Pencen
-  txtOutputGanjaran.value = Ganjaran.toFixed(2);
+  //Output Ganjaran
+  txtOutputGanjaran.value = ganjaran.toFixed(2);
 
   //Output Pencen
   txtOutputPencen.value = Pencen.toFixed(2);
@@ -660,8 +662,7 @@ Ganjaran=0.075*bulankira*gaji;
   txtOutputKhid3.value = khid3;
   txtOutputGaji.value = gaji;
   txtOutputUmurPersaraan.value = Tarikhbersara;
-  txtOutputCutiTanpa1.value = cutitanpa1;
-  txtOutputCutiTanpa2.value = cutitanpa2;
+  txtOutputCutiTanpa.value = cutitanpa;
   txtOutputCutiRehat.value = cutirehat;
   txtOutputTamat1.value = tamat1 + tamat2;
   txtOutputTamat2.value = tamat2;
@@ -760,10 +761,10 @@ function printPage(id)
       <td bgcolor="#0099ff">
          <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputItp" size="7" disabled />
       </td>
-      <td bgcolor="#0099ff" width=280>
+      <td bgcolor="#ffffcc" width=280>
         <font face="Verdana" size="2"> <b>Jumlah Gantian Cuti Rehat</b> </font> 
       </td>
-      <td  bgcolor="#0099ff" >
+      <td  bgcolor="#ffffcc" >
         <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputGajiResult" size="7" disabled/>
       </td>
       
@@ -774,10 +775,10 @@ function printPage(id)
       </td>
       <td bgcolor="#99d6ff">
          <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputItk" size="7" disabled/>
-         <td  bgcolor="#99d6ff">
+         <td  bgcolor="#99ff99">
         <font face="Verdana" size="2"> <b>Jumlah Ganjaran</b> </font> 
       </td>
-      <td bgcolor="#99d6ff">
+      <td bgcolor="#99ff99">
          <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputGanjaran" size="7" disabled/>
       </td>
       </td>
@@ -789,10 +790,10 @@ function printPage(id)
       <td bgcolor="#0099ff">
         <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputItju" size="7" disabled/>
       </td>
-      <td bgcolor="#0099ff">
+      <td bgcolor="#ff99ff">
         <font face="Verdana" size="2"> <b>Jumlah Pencen Bulanan</b> </font> 
       </td>
-      <td bgcolor="#008ae6">
+      <td bgcolor="#ff99ff">
          <font face="Verdana" size="2"> <b>RM</b> </font> <input type = "text" id = "txtOutputPencen" size="7" disabled/>
       </td>
       
@@ -809,8 +810,7 @@ function printPage(id)
    <input type = "text" id = "txtOutputKhid3" hidden/>
    <input type = "text" id = "txtOutputGaji" hidden/>
    <input type = "text" id = "txtOutputLahir3" hidden/>
-   <input type = "text" id = "txtOutputCutiTanpa1" hidden/>
-   <input type = "text" id = "txtOutputCutiTanpa2" hidden/>
+   <input type = "text" id = "txtOutputCutiTanpa" hidden/>
    <input type = "text" id = "txtOutputCutiRehat" hidden/>
 
    
@@ -824,7 +824,7 @@ function printPage(id)
 
  </table>
 </form>
-<button onclick="window.print()" class="button button1">Print this page</button>
+
        </div>
   
 </div>

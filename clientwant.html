@@ -425,6 +425,7 @@ body {padding:30px}
   var txtOutputItju = document.getElementById("txtOutputItju");
   var txtOutputItk = document.getElementById("txtOutputItk");
   var txtOutputItka = document.getElementById("txtOutputItka");
+  var txtOutputAsk1 = document.getElementById("txtOutputAsk1");
   var txtOutputGred = document.getElementById("txtOutputGred");
   var txtOutputIc = document.getElementById("txtOutputIc");
   var txtOutputName = document.getElementById("txtOutputName");
@@ -446,6 +447,8 @@ body {padding:30px}
   var txtOutputPencen = document.getElementById("txtOutputPencen");
   var txtOutputGanjaran = document.getElementById("txtOutputGanjaran");
   var txtOutputGajiImbuhan = document.getElementById("txtOutputGajiImbuhan");
+  var txtOutputGenapAsk = document.getElementById("txtOutputGenapAsk");
+ 
 
   
 
@@ -662,6 +665,41 @@ ganjaran=0.075*bulankira*gaji;
  
  //skim and gred
   skimgred = skim + " "+ gred;
+
+  //kiraan ASK
+   minusbulan1=0;
+   minustahun1=0;
+   plusbulan1=0;
+
+    if (lahir1<khid1) 
+      {
+        minusbulan1=1;
+      }
+
+    if ((lahir2-minusbulan1)<khid2)
+      { 
+        minustahun1=1; 
+        plusbulan1=12; 
+      }
+
+    ask=lahir2-minusbulan1+plusbulan1-khid2;
+    ask2=Tarikhbersara-minustahun1-khid3; 
+    jumask = ((ask2*12) + ask);
+
+  //Output ASK
+  txtOutputAsk1.value = jumask;
+
+  if (jumask >= 360)
+  {
+    genapask = 360;
+  }
+  else
+  {
+    genapask = jumask;
+  }
+
+  txtOutputGenapAsk.value = genapask;
+
  
   //Output
   txtOutputName.value = name;
@@ -778,10 +816,10 @@ function printPage(id)
       <td bgcolor="#0099ff">
          <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputItp" size="7" disabled />
       </td>
-      <td bgcolor="#0099ff" width=280>
+      <td bgcolor="#ff7c54" width=280>
         <font face="Verdana" size="2"> <b>Jumlah Gantian Cuti Rehat</b> </font> 
       </td>
-      <td  bgcolor="#0099ff" >
+      <td  bgcolor="#ff7c54" >
         <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputGajiResult" size="7" disabled/>
       </td>
       
@@ -792,10 +830,10 @@ function printPage(id)
       </td>
       <td bgcolor="#99d6ff">
          <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputItk" size="7" disabled/>
-         <td  bgcolor="#99d6ff">
+         <td  bgcolor="#ee964b">
         <font face="Verdana" size="2"> <b>Jumlah Ganjaran</b> </font> 
       </td>
-      <td bgcolor="#99d6ff">
+      <td bgcolor="#ee964b">
          <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputGanjaran" size="7" disabled/>
       </td>
       </td>
@@ -807,13 +845,33 @@ function printPage(id)
       <td bgcolor="#0099ff">
         <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputItju" size="7" disabled/>
       </td>
-      <td bgcolor="#0099ff">
+      <td bgcolor="#F4D35E">
         <font face="Verdana" size="2"> <b>Jumlah Pencen Bulanan</b> </font> 
       </td>
-      <td bgcolor="#0099ff">
+      <td bgcolor="#F4D35E">
          <font face="Verdana" size="2"> <b>RM</b> </font> <input type = "text" id = "txtOutputPencen" size="7" disabled/>
       </td>
       
+    </tr>
+    <tr>
+      <td bgcolor="#04c22a"colspan="4">
+      <font face="Verdana" size="2" ><center> <b> FAEDAH PERSARAAN ATAS SEBAB KESIHATAN </b></center></font>
+      </td>
+      
+    </tr>
+    <tr>
+      <td  bgcolor="#0099ff">
+         <font face="Verdana" size="2"> <b>ASK</b> </font>
+      </td>
+      <td  bgcolor="#0099ff">
+         <input type = "text" id = "txtOutputAsk1" />
+      </td>
+      <td  bgcolor="#0099ff">
+         <font face="Verdana" size="2"> <b>ASK</b> </font>
+      </td>
+      <td bgcolor="#0099ff">
+         <input type = "text" id = "txtOutputGenapAsk" />
+      </td>
     </tr>
 
   

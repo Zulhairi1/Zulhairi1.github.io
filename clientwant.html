@@ -448,9 +448,10 @@ body {padding:30px}
   var txtOutputGanjaran = document.getElementById("txtOutputGanjaran");
   var txtOutputGajiImbuhan = document.getElementById("txtOutputGajiImbuhan");
   var txtOutputGenapAsk = document.getElementById("txtOutputGenapAsk");
- 
+  var txtOutputGanjaranAsk = document.getElementById("txtOutputGanjaranAsk");
+  var txtOutputPencenAsk = document.getElementById("txtOutputPencenAsk");
+  var txtOutputImbuhanAsk = document.getElementById("txtOutputImbuhanAsk");
 
-  
 
  
   //Parse Variable
@@ -700,7 +701,36 @@ ganjaran=0.075*bulankira*gaji;
 
   txtOutputGenapAsk.value = genapask;
 
- 
+  if (genapask <= 120)
+  {
+    pencenask = 0.2;
+  }
+  else if (genapask >=121 || genapask <360)
+  {
+    pencenask = (1/600)*genapask;
+  }
+  else if (genapask >= 361)
+  {
+    pencenask =  0.6;
+  }
+
+  pencenAsk1=(pencenask)*gaji;
+  txtOutputPencenAsk.value = pencenAsk1.toFixed(2);
+
+  //kiraan Ganjaran
+  ganjaranAsk=0.075*genapask*gaji;
+
+
+if (cutirehat <= 150)
+  {
+    gajiImbuhanAsk = (1/30)*cutirehat *(gajitotal);
+  }
+
+  txtOutputImbuhanAsk.value = gajiImbuhanAsk.toFixed(2);
+
+  //output Ganjaran ASK
+  txtOutputGanjaranAsk.value = ganjaranAsk.toFixed(2);
+  
   //Output
   txtOutputName.value = name;
   txtOutputItp.value = Itp;
@@ -745,38 +775,41 @@ function printPage(id)
        <div id="content">
   <!--Jadual Keputusan-->
   <table border="1">
-    <tr colspan="4">
+    <tr >
       <td  bgcolor="#0099ff">
        <font face="Verdana" size="2"> <b>Nama</b> </font>
       </td>
-      <td colspan="3"  bgcolor="#0099ff">
+      <td   bgcolor="#0099ff">
          <font face="Verdana" size="1"><input type = "text" id = "txtOutputName" size="40" disabled/></font> </input>
       </td>
-    <tr>
-      <td bgcolor="#99d6ff">
+      <td bgcolor="#0099ff">
         <font face="Verdana" size="2"> <b>No Kad Pengenalan</b> </font>
         
       </td>
-      <td colspan="3" bgcolor="#99d6ff">
+      <td  colspan="3" bgcolor="#0099ff">
          <input type = "text" id = "txtOutputIc" size="40" disabled/>
       </td>
-    </tr>
+
     <tr>
-      <td  bgcolor="#0099ff">
+
+      <td  bgcolor="#99d6ff">
          <font face="Verdana" size="2"> <b>Skim/Gred</b> </font>
       </td>
-      <td colspan="3" bgcolor="#0099ff">
+      <td bgcolor="#99d6ff">
          <input type = "text" id = "txtOutputGred" disabled/>
       </td>
-    </tr>
-    <tr>
-      <td bgcolor="#99d6ff">
+        <td bgcolor="#99d6ff">
         <font face="Verdana" size="2"> <b>Unit/ Jabatan/ Kementerian</b> </font>
       </td>
-      <td colspan="3" bgcolor="#99d6ff">
-         <textarea id="txtOutputJab" rows="4" cols="30" disabled></textarea>
+      <td  colspan="3"  bgcolor="#99d6ff">
+         <textarea id="txtOutputJab" rows="2" cols="30" disabled></textarea>
       </td>
+      
     </tr>
+
+
+    
+   
     <tr>
       <td  bgcolor="#0099ff">
         <font face="Verdana" size="2"> <b>Tarikh Bersara Wajib</b> </font>
@@ -786,28 +819,12 @@ function printPage(id)
              <input type = "text" id = "txtOutputLahir2" size="2" disabled/>
              <input type = "text" id = "txtOutputUmurPersaraan" size="4" disabled/>
       </td>
-      <td bgcolor="#0099ff">
-        <font face="Verdana" size="2"> <b>Genap Bulan Perkhidmatan</b> </font> 
-      </td>
-      <td bgcolor="#0099ff">
-         <input type = "text" id = "txtOutputBulankira" size="5" disabled/> <font face="Verdana" size="2"> <b>Bulan</b> </font> 
-      </td>
-
-    </tr>
-    <tr>
-      <td bgcolor="#99d6ff">
+       <td bgcolor="#99d6ff">
        <font face="Verdana" size="2"> <b>Imbuhan Tetap Khidmat Awam (ITKA)</b> </font>  
       </td>
       <td bgcolor="#99d6ff">
           <font face="Verdana" size="2"> <b>RM</b> </font> <input type = "text" id = "txtOutputItka" size="7" disabled />
       </td>
-      <td bgcolor="#99d6ff">
-        <font face="Verdana" size="2"> <b>Gaji Akhir dan Imbuhan</b> </font> 
-      </td>
-      <td bgcolor="#99d6ff">
-         <font face="Verdana" size="2"> <b>RM </b> </font> <input type = "text" id = "txtOutputGajiImbuhan" size="7" disabled/>
-      </td>
-      
     </tr>
     <tr>
       <td bgcolor="#0099ff" width=280>
@@ -816,61 +833,111 @@ function printPage(id)
       <td bgcolor="#0099ff">
          <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputItp" size="7" disabled />
       </td>
-      <td bgcolor="#ff7c54" width=280>
-        <font face="Verdana" size="2"> <b>Jumlah Gantian Cuti Rehat</b> </font> 
-      </td>
-      <td  bgcolor="#ff7c54" >
-        <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputGajiResult" size="7" disabled/>
-      </td>
-      
-    </tr>
-    <tr>
       <td bgcolor="#99d6ff">
         <font face="Verdana" size="2"> <b>Imbuhan Tetap Keraian (ITK)</b> </font> 
       </td>
       <td bgcolor="#99d6ff">
          <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputItk" size="7" disabled/>
-         <td  bgcolor="#ee964b">
-        <font face="Verdana" size="2"> <b>Jumlah Ganjaran</b> </font> 
-      </td>
-      <td bgcolor="#ee964b">
-         <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputGanjaran" size="7" disabled/>
-      </td>
-      </td>
-    </tr>
-    <tr>
-      <td bgcolor="#0099ff">
+       </td>
+       <td bgcolor="#0099ff">
         <font face="Verdana" size="2"> <b>Imbuhan Tetap Jawatan Utama/Khas (ITJU/K)</b> </font> 
       </td>
       <td bgcolor="#0099ff">
         <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputItju" size="7" disabled/>
       </td>
-      <td bgcolor="#F4D35E">
+
+    </tr>
+
+
+    <tr>
+      <td bgcolor="#8080ff"colspan="6" >
+      <font face="Verdana" size="3" ><center> <b> FAEDAH PERSARAAN DI BAWAH DASAR PEMISAH </b></center></font>
+      </td>
+  
+    </tr>
+    <tr >
+         <td bgcolor="#0099ff" >
+        <font face="Verdana" size="2"> <b>Genap Bulan Perkhidmatan</b> </font> 
+      </td>
+      <td bgcolor="#0099ff">
+         <input type = "text" id = "txtOutputBulankira" size="5" disabled/> <font face="Verdana" size="2"> <b>Bulan</b> </font> 
+      </td>
+      <td bgcolor="#0099ff" >
+        <font face="Verdana" size="2"> <b>Jumlah Cuti Dikumpul</b> </font> 
+      </td>
+      <td bgcolor="#0099ff">
+         <input type = "text" id = "txtOutputCutiRehat" disabled="" /> <font face="Verdana" size="2"> <b>Bulan</b> </font> 
+      </td>
+      <td bgcolor="#99d6ff">
+        <font face="Verdana" size="2"> <b>Gaji Akhir dan Imbuhan</b> </font> 
+      </td>
+      <td bgcolor="#99d6ff">
+         <font face="Verdana" size="2"> <b>RM </b> </font> <input type = "text" id = "txtOutputGajiImbuhan" size="7" disabled/>
+      </td>
+      
+            
+    </tr>
+    <tr>
+       <td bgcolor="#F4D35E">
         <font face="Verdana" size="2"> <b>Jumlah Pencen Bulanan</b> </font> 
       </td>
       <td bgcolor="#F4D35E">
          <font face="Verdana" size="2"> <b>RM</b> </font> <input type = "text" id = "txtOutputPencen" size="7" disabled/>
       </td>
+      <td  bgcolor="#ee964b">
+        <font face="Verdana" size="2"> <b>Jumlah Ganjaran</b> </font> 
+      </td>
+      <td bgcolor="#ee964b">
+         <font face="Verdana" size="2"> <b>RM</b> </font>  <input type = "text" id = "txtOutputGanjaran" size="7" disabled/>
+      </td>
+       <td bgcolor="#ff7c54" width=280>
+        <font face="Verdana" size="2"> <b>Jumlah Gantian Cuti Rehat</b> </font> 
+      </td>
+      <td  bgcolor="#ff7c54" >
+        <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputGajiResult" size="7" disabled/>
+      </td>
+     
       
     </tr>
     <tr>
-      <td bgcolor="#04c22a"colspan="4">
-      <font face="Verdana" size="2" ><center> <b> FAEDAH PERSARAAN ATAS SEBAB KESIHATAN </b></center></font>
+      <td bgcolor="#04c22a"colspan="6">
+      <font face="Verdana" size="3" ><center> <b> FAEDAH PERSARAAN ATAS SEBAB KESIHATAN </b></center></font>
       </td>
       
     </tr>
     <tr>
+
       <td  bgcolor="#0099ff">
-         <font face="Verdana" size="2"> <b>ASK</b> </font>
+         <font face="Verdana" size="2"> <b>ASK - Jumlah Penuh Perkhidmatan</b> </font>
       </td>
       <td  bgcolor="#0099ff">
          <input type = "text" id = "txtOutputAsk1" />
       </td>
       <td  bgcolor="#0099ff">
-         <font face="Verdana" size="2"> <b>ASK</b> </font>
+         <font face="Verdana" size="2"> <b>Genap ASK</b> </font>
       </td>
       <td bgcolor="#0099ff">
          <input type = "text" id = "txtOutputGenapAsk" />
+      </td>
+    </tr>
+    <tr>
+      <td  bgcolor="#0099ff">
+         <font face="Verdana" size="2"> <b> Jumlah Pencen</b> </font>
+      </td>
+      <td bgcolor="#0099ff">
+         <input type = "text" id = "txtOutputPencenAsk" />
+      </td>
+       <td  bgcolor="#0099ff">
+         <font face="Verdana" size="2"> <b> Jumlah Ganjaran</b> </font>
+      </td>
+      <td bgcolor="#0099ff">
+         <input type = "text" id = "txtOutputGanjaranAsk" />
+      </td>
+       <td bgcolor="#ff7c54" width=280>
+        <font face="Verdana" size="2"> <b>Jumlah Gantian Cuti Rehat</b> </font> 
+      </td>
+      <td  bgcolor="#ff7c54" >
+        <font face="Verdana" size="2"> <b>RM</b> </font>   <input type = "text" id = "txtOutputImbuhanAsk" size="7" disabled/>
       </td>
     </tr>
 
@@ -886,7 +953,7 @@ function printPage(id)
    <input type = "text" id = "txtOutputGaji" hidden/>
    <input type = "text" id = "txtOutputLahir3" hidden/>
    <input type = "text" id = "txtOutputCutiTanpa" hidden/>
-   <input type = "text" id = "txtOutputCutiRehat" hidden/>
+   
 
    
    <input type = "text" id = "txtOutputTamat1" hidden/>

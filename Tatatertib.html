@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html>
+ <style>
+  .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {font-size: 10px;background-color: #008CBA;}
+
+
+table {
+  border-collapse: collapse;
+}
+
+table,td{
+  border: 1px solid blue;
+}
+
+.table1,.td1{
+  border: 3px solid black;
+  width: 50%; 
+}
+
+body {padding:30px}
+.print-area {border:1px solid red;padding:1em;margin:0 0 1em}
+</style>
+<title>Kalkulator Simulasi Hukuman Tatatertib</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+
+<body >
+
+  <div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="ASK.html" class="w3-button w3-block w3-black">KALKULATOR DASAR PEMISAH</a>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br>
+<center>
+ <!--Heading untuk Kalkulator Exit Policy-->
+<table class="table1">
+	<center>
+	<td class="td1" colspan="3">
+ <h2 align="center">Kalkulator Simulasi Hukuman Tatatertib</h2>
+<!--Heading untuk Maklumat Pegawai-->
+ <h3  align="center">Maklumat Pegawai</h3>
+</td>
+</center>
+</table>
+<br><br>
+ <!--Jadual Maklumat Pegawai-->
+ <form id="form" name="myForm" onsubmit="return saySubmit()">
+  <table border="1" bgcolor="#dfe5eb">
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Nama 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         <input type = "text" id = "txtName" width="555" maxlength="200" size="40"/> <br>
+      </td>
+    </tr>
+     <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+        <label>No Kad Pengenalan <br> </label>
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         <input type = "text" id = "txtIc" maxlength="14" width="555" maxlength="200" size="40" placeholder="000000-00-0000"/> <br>
+      </td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+        <label>Skim <br> </label>
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         <select  id="txtSkim">
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="G">G</option>
+              <option value="H">H</option>
+              <option value="I">I</option>
+              <option value="J">J</option>
+              <option value="K">K</option>
+              <option value="L">L</option>
+              <option value="M">M</option>
+              <option value="N">N</option>
+              <option value="O">O</option>
+              <option value="P">P</option>
+              <option value="Q">Q</option>
+              <option value="R">R</option>
+              <option value="S">S</option>
+              <option value="T">T</option>
+              <option value="U">U</option>
+              <option value="V">V</option>
+              <option value="W">W</option>
+              <option value="X">X</option>
+              <option value="Y">Y</option>
+              <option value="Z">Z</option>
+            
+          </select>
+      </td>
+    </tr>
+     <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+          <label for="gred">Gred</label>
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+          <select  id="txtGred">
+              <option value="1"> 1</option>
+              <option value="2"> 2</option>
+              <option value="3"> 3</option>
+              <option value="4"> 4</option>
+              <option value="5"> 5</option>
+              <option value="6"> 6</option>
+              <option value="7"> 7</option>
+              <option value="8"> 8</option>
+              <option value="9"> 9</option>
+              <option value="10"> 10</option>
+              <option value="11"> 11</option>
+              <option value="12"> 12</option>
+              <option value="13"> 13</option>
+              <option value="14"> 14</option>
+              <option value="15"> 15</option>
+              <option value="16"> 16</option>
+              <option value="17"> 17</option>
+              <option value="18"> 18</option>
+              <option value="19"> 19</option>
+              <option value="20"> 20</option>
+              <option value="21"> 21</option>
+              <option value="22"> 22</option>
+              <option value="23"> 23</option>
+              <option value="24"> 24</option>
+              <option value="25"> 25</option>
+              <option value="26"> 26</option>
+              <option value="27"> 27</option>
+              <option value="28"> 28</option>
+              <option value="29"> 29</option>
+              <option value="30"> 30</option>
+              <option value="31"> 31</option>
+              <option value="32"> 32</option>
+              <option value="33"> 33</option>
+              <option value="34"> 34</option>
+              <option value="35"> 35</option>
+              <option value="36"> 36</option>
+              <option value="37"> 37</option>
+              <option value="38"> 38</option>
+              <option value="39"> 39</option>
+              <option value="40"> 40</option>
+              <option value="41"> 41</option>
+              <option value="42"> 42</option>
+              <option value="43"> 43</option>
+              <option value="44"> 44</option>
+              <option value="45"> 45</option>
+              <option value="46"> 46</option>
+              <option value="47"> 47</option>
+              <option value="48"> 48</option>
+              <option value="49"> 49</option>
+              <option value="50"> 50</option>
+              <option value="51"> 51</option>
+              <option value="52"> 52</option>
+              <option value="53"> 53</option>
+              <option value="54"> 54</option>
+              <option value="Khas C">Khas C</option>
+              <option value="Utama C">Utama C</option>
+              <option value="Khas B">Khas B</option>
+              <option value="Utama B">Utama B</option>
+              <option value="Khas A">Khas A</option>
+              <option value="Utama A">Utama A</option>
+              <option value="Utama Turus III">Utama Turus III</option>
+              <option value="Utama Turus II">Utama Turus II</option>
+              <option value="Utama Turus I">Utama Turus I</option>
+          </select>
+      </td>
+    </tr>
+     <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Tarikh LTT: 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         <input type = "text" id="txtLahir1"  maxlength="2" size="2" placeholder="00">
+                &nbsp;/
+        <input type = "text" id="txtLahir2"  maxlength="2"  size="2" placeholder="00">
+                &nbsp;/
+        <input type = "text" id="txtLahir3"  maxlength="4"  size="4" placeholder="0000">
+      </td>
+    </tr>
+     <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+        TPG 
+      </td>
+      <td  bgcolor="#dfe5eb" width="385" height="20">
+            
+
+
+            <select id="txtUmurPersaraan">
+              <option value="55">January</option>
+              <option value="56">April</option>
+              <option value="58">July</option>
+              <option value="60">October</option>
+             </select>
+              
+      </td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Gaji Pokok: 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         RM <input type = "text" id="txtGaji"  value="0" >  
+      </td>
+    </tr>
+
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Elaun: 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         RM <input type = "text" id="txtGaji"  value="0" >  
+      </td>
+    </tr>
+    
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Gaji Minimum 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+        RM <input type = "text" id="txtCutiRehat" maxlength="3" value="0" >
+              
+      </td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Jumlah Ketidakhadiran: 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         Hari <input type = "text" id="txtGaji"  value="0" >  
+      </td>
+    </tr>
+    
+  
+ </table>
+<br>
+
+  <input type = "button"value = "Kira" onclick = "saySubmit()"/ class="button button1">
+
+  
+ </form>
+
+
+      
+
+</body>
+</html>

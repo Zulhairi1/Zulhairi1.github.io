@@ -38,7 +38,20 @@ body {padding:30px}
 .print-area {border:1px solid red;padding:1em;margin:0 0 1em}
 </style>
 <title>Kalkulator Dasar Pemisah</title>
-<body >
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<body>
+
+
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="Tatatertib.html" class="w3-button w3-block w3-black">KALKULATOR TATATERTIB</a>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br>
 <center>
  <!--Heading untuk Kalkulator Exit Policy-->
 <table class="table1">
@@ -223,7 +236,7 @@ body {padding:30px}
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
          Umur Persaraan <p1>* </p1>
       </td>
-      <td  bgcolor="#dfe5eb" width="385" height="20">
+      <td  bgcolor="#dfe5eb" width="385" height="20" colspan="2">
             
 
 
@@ -240,8 +253,8 @@ body {padding:30px}
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
          Cuti Tanpa Gaji (Maksima 360 Hari)<p1>* </p1>
       </td>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
-         <input type = "text" id="txtCutiTanpa" value="0" >
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20" colspan="2">
+         <input type = "text" id="txtCutiTanpa" placeholder="0" >
       </td>
       
     </tr>
@@ -251,7 +264,7 @@ body {padding:30px}
          Gantian Cuti Rehat (Maksima 150 Hari) <p1>* </p1>
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         <input type = "text" id="txtCutiRehat" maxlength="3" value="0" >
+         <input type = "text" id="txtCutiRehat" maxlength="3" placeholder="0" >
               
       </td>
     </tr>
@@ -260,11 +273,11 @@ body {padding:30px}
          Tarikh Dijangka Tamat Perkhidmatan: <p1>* </p1>
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         <input type = "text" id="txtTamat1"  maxlength="2" value="00" size="2">
+         <input type = "text" id="txtTamat1"  maxlength="2" placeholder="00" size="2">
                 &nbsp;/
-        <input type = "text" id="txtTamat2"  maxlength="2" value="00" size="2">
+        <input type = "text" id="txtTamat2"  maxlength="2" placeholder="00" size="2">
                 &nbsp;/
-        <input type = "text" id="txtTamat3"  maxlength="4" value="0000" size="4">
+        <input type = "text" id="txtTamat3"  maxlength="4" placeholder="0000" size="4">
       </td>
     </tr>
     <tr>
@@ -272,7 +285,7 @@ body {padding:30px}
          Gaji Akhir Diterima: <p1>* </p1>
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         RM <input type = "text" id="txtGaji"  value="0" >  
+         RM <input type = "text" id="txtGaji"  placeholder="0000" >  
       </td>
     </tr>
     

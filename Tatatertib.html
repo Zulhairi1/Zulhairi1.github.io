@@ -190,25 +190,25 @@ body {padding:30px}
     </tr>
      <tr>
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
-         Tarikh LTT: 
+         Tarikh Lembaga Tatatertib: 
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         <input type = "text" id="txtLahir1"  maxlength="2" size="2" placeholder="00">
+         <input type = "text" id="txtLem1"  maxlength="2" size="2" placeholder="00">
                 &nbsp;/
-        <input type = "text" id="txtLahir2"  maxlength="2"  size="2" placeholder="00">
+        <input type = "text" id="txtLem2"  maxlength="2"  size="2" placeholder="00">
                 &nbsp;/
-        <input type = "text" id="txtLahir3"  maxlength="4"  size="4" placeholder="0000">
+        <input type = "text" id="txtLem3"  maxlength="4"  size="4" placeholder="0000">
       </td>
     </tr>
      <tr>
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
         TPG 
       </td>
-      <td  bgcolor="#dfe5eb" width="385" height="20">
+      <td  colspan="3" bgcolor="#dfe5eb" width="385" height="20">
             
 
 
-            <select id="txtUmurPersaraan">
+            <select id="txtBulan">
               <option value="55">January</option>
               <option value="56">April</option>
               <option value="58">July</option>
@@ -231,16 +231,27 @@ body {padding:30px}
          Elaun: 
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         RM <input type = "text" id="txtGaji"  value="0" >  
+         RM <input type = "text" id="txtElaun"  value="0" >  
       </td>
     </tr>
+     <form action = "" id="result">
+     <tr>
+      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+         Emolumen: 
+      </td>
+      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+         RM <input type = "text" id = "txtOutputEmolumen" size="10" disabled/> 
+
+      </td>
+    </tr>
+  </form>
     
     <tr>
       <td align="left" bgcolor="#dfe5eb" width="347" height="20">
          Gaji Minimum 
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-        RM <input type = "text" id="txtCutiRehat" maxlength="3" value="0" >
+        RM <input type = "text" id="txtCutiRehat" maxlength="8" value="0" >
               
       </td>
     </tr>
@@ -249,15 +260,368 @@ body {padding:30px}
          Jumlah Ketidakhadiran: 
       </td>
       <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         Hari <input type = "text" id="txtGaji"  value="0" >  
+         Hari <input type = "text" id="txtKetidakhadiran"  value="0" >  
       </td>
     </tr>
-    
+
   
+  </table>
+  <!--button-->
+  <input type = "button"value = "Kira" onclick = "saySubmit()"/ class="button button1">
+
+  
+ </form>
+
+
+
+
+
+
+
+
+
+<script>
+ function saySubmit(){
+
+  
+
+  //declare input variable
+  var txtName = document.getElementById("txtName");
+  var txtIc = document.getElementById("txtIc");
+  var txtGaji = document.getElementById("txtGaji");
+  var txtElaun = document.getElementById("txtElaun");
+  var txtLem1 = document.getElementById("txtLem1");
+  var txtLem2 = document.getElementById("txtLem2");
+  var txtLem3 = document.getElementById("txtLem3");
+  var txtKetidakhadiran = document.getElementById("txtKetidakhadiran");
+
+
+  //Output Variable
+  var txtOutputName = document.getElementById("txtOutputName");
+  var txtOutputIc = document.getElementById("txtOutputIc");
+  var txtOutputEmolumen = document.getElementById("txtOutputEmolumen");
+  var txtOutputEmolumenKewangan = document.getElementById("txtOutputEmolumenKewangan");
+  var txtOutputBulan18 = document.getElementById("txtOutputBulan18");
+  var txtOutputBulan24 = document.getElementById("txtOutputBulan24");
+  var txtOutputDenda1 = document.getElementById("txtOutputDenda1");
+  var txtOutputDenda2 = document.getElementById("txtOutputDenda2");
+  var txtOutputDenda3 = document.getElementById("txtOutputDenda3");
+  var txtOutputDenda4 = document.getElementById("txtOutputDenda4");
+  var txtOutputDenda5 = document.getElementById("txtOutputDenda5");
+  var txtOutputDenda6 = document.getElementById("txtOutputDenda6");
+  var txtOutputDenda7 = document.getElementById("txtOutputDenda7");
+
+  var txtOutputLem1 = document.getElementById("txtOutputLem1");
+  var txtOutputLem2 = document.getElementById("txtOutputLem2");
+  var txtOutputLem3 = document.getElementById("txtOutputLem3");
+  var txtOutputKetidakhadiran = document.getElementById("txtOutputKetidakhadiran");
+  
+
+
+  var name = txtName.value;
+  var ic = txtIc.value;
+  var Gaji = parseFloat(txtGaji.value);
+  var Elaun = parseFloat(txtElaun.value);
+  var Lem1 = parseInt(txtLem1.value);
+  var Lem2 = parseInt(txtLem2.value);
+  var Lem3 = parseInt(txtLem3.value);
+  var Ketidakhadiran = parseInt(txtKetidakhadiran.value);
+
+  TarikhBulan12Lem3 = Lem3 + 1;
+  TarikhBulan12Lem1 = Lem1 - 1;
+  TarikhBulan = TarikhBulan12Lem1 + "/" + Lem2 + "/" + TarikhBulan12Lem3;
+
+  TarikhBulan18Lem1 = Lem1 - 1;
+  TarikhBulan18Lem2 = Lem2 + 18;
+  TarikhBulan18Lem2Bahagi = parseInt(TarikhBulan18Lem2 / 12);
+  //bulan
+  TarikhBulan18Lem2Darab = TarikhBulan18Lem2 - (12 * TarikhBulan18Lem2Bahagi );
+  //tahun
+  TarikhBulan18Lem3 = Lem3 + TarikhBulan18Lem2Bahagi;
+  //TarikhBulan 18
+  TarikhBulan18Akhir =  TarikhBulan12Lem1 + "/" + TarikhBulan18Lem2Darab + "/" + TarikhBulan18Lem3;
+
+  TarikhBulan24Lem1 = Lem1 - 1;
+  TarikhBulan24Lem2 = Lem2 + 24;
+  TarikhBulan24Lem2Bahagi = parseInt(TarikhBulan24Lem2 / 12);
+  //bulan
+  TarikhBulan24Lem2Darab = TarikhBulan24Lem2 - (12 * TarikhBulan24Lem2Bahagi );
+  if (TarikhBulan24Lem2Darab == "0")
+  {
+    TarikhBulan24Lem2Darab = Lem2;
+  }
+  //tahun
+  TarikhBulan24Lem3 = Lem3 + TarikhBulan24Lem2Bahagi;
+  //TarikhBulan 14
+  TarikhBulan24Akhir =  TarikhBulan24Lem1 + "/" + TarikhBulan24Lem2Darab + "/" + TarikhBulan24Lem3;
+
+
+  
+  Emolumen = Gaji+ Elaun;
+  EmolumenKewangan = Ketidakhadiran* (Emolumen/30);
+  Ketidakhadiran = Ketidakhadiran + " Hari";
+
+ 
+
+
+  Denda1= ((Emolumen/30)*1);
+  Denda2= ((Emolumen/30)*2);
+  Denda3= ((Emolumen/30)*3);
+  Denda4= ((Emolumen/30)*4);
+  Denda5= ((Emolumen/30)*5);
+  Denda6= ((Emolumen/30)*6);
+  Denda7= ((Emolumen/30)*7);
+
+
+  txtOutputEmolumenKewangan.value = EmolumenKewangan.toFixed(2);;
+  txtOutputLem1.value = Lem1;
+  txtOutputLem2.value = Lem2;
+  txtOutputLem3.value = TarikhBulan;
+  txtOutputName.value = name;
+  txtOutputIc.value = ic;
+  txtOutputKetidakhadiran.value = Ketidakhadiran;
+  txtOutputEmolumen.value = Emolumen;
+  txtOutputBulan18.value = TarikhBulan18Akhir;
+  txtOutputBulan24.value = TarikhBulan24Akhir;
+  txtOutputDenda1.value = Denda1.toFixed(2);
+  txtOutputDenda2.value = Denda2.toFixed(2);
+  txtOutputDenda3.value = Denda3.toFixed(2);
+  txtOutputDenda4.value = Denda4.toFixed(2);
+  txtOutputDenda5.value = Denda5.toFixed(2);
+  txtOutputDenda6.value = Denda6.toFixed(2);
+  txtOutputDenda7.value = Denda7.toFixed(2);
+ 
+
+}
+</script>
+
+
+
+
+
+
+
+    <p style="color:red; font-size:16px;">Ruangan ini diisi secara automatik</p>
+       
+       <form action = "" id="result">
+       <div id="content">
+  <!--Jadual Keputusan-->
+ 
+ 
+  <table border="1">
+    <center>
+    <tr>
+      <td align="center" colspan="8">SIMULASI HUKUMAN</td>
+    </tr>
+    <TR>
+      <td align="center"  colspan="8">Lembaga Perkhidmatan Awam</td>
+    </TR>
+    <tr>
+     
+      <td   colspan="3" bgcolor="#99d6ff">
+         <font face="Verdana" size="1">
+          <input type = "text" id = "txtOutputName" size="40" disabled/>
+          <br>
+         <input type = "text" id = "txtOutputIc" size="40" disabled/>
+         <input type = "text" id = "txtOutputLem1" size="40" disabled hidden />
+         <input type = "text" id = "txtOutputLem2" size="40" disabled hidden />
+
+         
+          <br>
+        </input>
+      </font>
+      </td>
+
+      <td>
+        TEMPOH
+      </td>
+      <td>
+        IMPLIKASI KEWANGAN
+      </td>
+      <td colspan="2">
+        TEMPOH & TARIKH TIDAK LAYAK NAIK PANGKAT
+      </td>
+      <td>
+        TARIKH PERGERAKAN GAJI
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3">AMARAN</td>
+    <td>Tiada</td>
+    <td>Tiada</td>
+    <td>12</td>
+    <td><input type = "text" id = "txtOutputLem3" size="20" disabled/></td>
+    <td>Tidak Berubah</td>
+    </tr>
+  
+   <tr>
+      <td colspan="3" rowspan="7">DENDA</td>
+    <td>
+      1 Hari <br>
+    
+    </td>
+    <td>
+      <input type = "text" id = "txtOutputDenda1" size="20" disabled/> <br>
+      
+      
+      
+      
+      
+      
+    </td>
+    <td rowspan="7">18</td>
+    <td rowspan="7" ><input type = "text" id = "txtOutputBulan18" size="10" disabled/> </td>
+    <td rowspan="7">Tidak Berubah</td>
+    </tr>
+
+    <tr>
+      <td>2 Hari</td>
+      <td><input type = "text" id = "txtOutputDenda2" size="20" disabled/> <br></td>
+    </tr>
+    <tr>
+      <td>3 Hari</td>
+      <td><input type = "text" id = "txtOutputDenda3" size="20" disabled/> <br> <br></td>
+    </tr>
+    <tr>
+      <td>4 Hari</td>
+      <td><input type = "text" id = "txtOutputDenda4" size="20" disabled/> <br> <br></td>
+    </tr>
+    <tr>
+      <td>5 Hari</td>
+      <td><input type = "text" id = "txtOutputDenda5" size="20" disabled/> <br><br></td>
+    </tr>
+    <tr>
+      <td>6 Hari</td>
+      <td><input type = "text" id = "txtOutputDenda6" size="20" disabled/> <br> <br></td>
+    </tr>
+    <tr>
+      <td>7 Hari</td>
+      <td><input type = "text" id = "txtOutputDenda7" size="20" disabled/> <br> <br></td>
+    </tr>
+
+    <!--Lucut-->
+
+    <tr>
+      <td colspan="3">
+      LUCUT HAK EMOLUMEN
+    </td>
+    <td><input type = "text" id = "txtOutputKetidakhadiran" size="6" disabled  /></td>
+    <td><input type = "text" id = "txtOutputEmolumenKewangan" size="20" disabled  /></td>
+    <td>24</td>
+    <td><input type = "text" id = "txtOutputBulan24" size="20" disabled  /></td>
+    <td>Tidak Berubah</td>
+    </tr>
+
+    <tr>
+      <td colspan="3" rowspan="4">TANGGUH PERGERAKAN GAJI</td>
+    <td>
+      3 Bulan <br>
+    </td>
+    <td>
+      810.00 <br>
+    </td>
+    <td rowspan="4">30</td>
+    <td rowspan="4">??</td>
+    <td>??</td>
+    </tr>
+
+    <tr>
+      <td>6 Bulan <br></td>
+      <td>1620.00</td>
+      <td>??</td>
+    </tr>
+
+    <tr>
+      <td>9 Bulan <br></td>
+      <td>1620.00</td>
+      <td>??</td>
+    </tr>
+    <tr>
+      <td>12 Bulan <br></td>
+      <td>1620.00</td>
+      <td>??</td>
+    </tr>
+
+
+
+    <tr>
+      <td rowspan="9">TURUN GAJI </td>
+    <td>
+      Bil. Pergerakan <br>
+    </td>
+    <td>
+      1 <br>
+    </td>
+    <td> 12 Bulan</td>
+    <td>??</td>
+    <td rowspan="9">36</td>
+    <td rowspan="9">??</td>
+    <td rowspan="9"> ???</td>
+    </tr>
+
+    <tr>
+      <td> Atas Gaji Min **</td>
+      <td>270.00</td>
+      <td>24 Bulan</td>
+      <td>??</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>36 Bulan</td>
+      <td>??</td>
+    </tr>
+
+    <tr>
+      <td> Bil. Pergerakan</td>
+      <td>2</td>
+      <td>12 Bulan</td>
+      <td>??</td>
+    </tr>
+
+    <tr>
+      <td> Atas Gaji Min **</td>
+      <td>540.00</td>
+      <td>24 Bulan</td>
+      <td>??</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>36 Bulan</td>
+      <td>??</td>
+    </tr>
+
+<tr>
+      <td> Bil. Pergerakan</td>
+      <td>3</td>
+      <td>12 Bulan</td>
+      <td>??</td>
+    </tr>
+
+    <tr>
+      <td> Atas Gaji Min **</td>
+      <td>810.00</td>
+      <td>24 Bulan</td>
+      <td>??</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>36 Bulan</td>
+      <td>??</td>
+    </tr>
+
+      
+
+    
+    
+  </center>
  </table>
+ 
 <br>
 
-  <input type = "button"value = "Kira" onclick = "saySubmit()"/ class="button button1">
 
   
  </form>

@@ -209,10 +209,10 @@ body {padding:30px}
 
 
             <select id="txtBulan">
-              <option value="55">January</option>
-              <option value="56">April</option>
-              <option value="58">July</option>
-              <option value="60">October</option>
+              <option value="Januari">January</option>
+              <option value="April">April</option>
+              <option value="Julai">July</option>
+              <option value="Oktober">October</option>
              </select>
               
       </td>
@@ -287,6 +287,7 @@ body {padding:30px}
 
   //declare input variable
   var txtName = document.getElementById("txtName");
+  var txtGred = document.getElementById("txtGred");
   var txtIc = document.getElementById("txtIc");
   var txtGaji = document.getElementById("txtGaji");
   var txtElaun = document.getElementById("txtElaun");
@@ -294,15 +295,19 @@ body {padding:30px}
   var txtLem2 = document.getElementById("txtLem2");
   var txtLem3 = document.getElementById("txtLem3");
   var txtKetidakhadiran = document.getElementById("txtKetidakhadiran");
+  var txtBulan = document.getElementById("txtBulan");
 
 
   //Output Variable
   var txtOutputName = document.getElementById("txtOutputName");
+  var txtOutputGred = document.getElementById("txtOutputGred");
   var txtOutputIc = document.getElementById("txtOutputIc");
   var txtOutputEmolumen = document.getElementById("txtOutputEmolumen");
   var txtOutputEmolumenKewangan = document.getElementById("txtOutputEmolumenKewangan");
   var txtOutputBulan18 = document.getElementById("txtOutputBulan18");
   var txtOutputBulan24 = document.getElementById("txtOutputBulan24");
+  var txtOutputBulan30 = document.getElementById("txtOutputBulan30");
+  var txtOutputBulan36 = document.getElementById("txtOutputBulan36");
   var txtOutputDenda1 = document.getElementById("txtOutputDenda1");
   var txtOutputDenda2 = document.getElementById("txtOutputDenda2");
   var txtOutputDenda3 = document.getElementById("txtOutputDenda3");
@@ -315,10 +320,35 @@ body {padding:30px}
   var txtOutputLem2 = document.getElementById("txtOutputLem2");
   var txtOutputLem3 = document.getElementById("txtOutputLem3");
   var txtOutputKetidakhadiran = document.getElementById("txtOutputKetidakhadiran");
+
+  var txtOutputBulan1 = document.getElementById("txtOutputBulan1");
+  var txtOutputBulan2 = document.getElementById("txtOutputBulan2");
+  var txtOutputBulan3 = document.getElementById("txtOutputBulan3");
+  var txtOutputBulan4 = document.getElementById("txtOutputBulan4");
+  var txtOutputBulan5 = document.getElementById("txtOutputBulan5");
+  var txtOutputKgt = document.getElementById("txtOutputKgt");
+  var txtOutputKgt2 = document.getElementById("txtOutputKgt2");
+  var txtOutputKgt3 = document.getElementById("txtOutputKgt3");
   
+  var txtOutputKgtkewangan1 = document.getElementById("txtOutputKgtkewangan1");
+  var txtOutputKgtkewangan2 = document.getElementById("txtOutputKgtkewangan2");
+  var txtOutputKgtkewangan3 = document.getElementById("txtOutputKgtkewangan3");
+  var txtOutputKgtkewangan4 = document.getElementById("txtOutputKgtkewangan4");
+  var txtOutputKgtkewangan5 = document.getElementById("txtOutputKgtkewangan5");
+  var txtOutputKgtkewangan6 = document.getElementById("txtOutputKgtkewangan6");
+  var txtOutputKgtkewangan7 = document.getElementById("txtOutputKgtkewangan7");
+  var txtOutputKgtkewangan8 = document.getElementById("txtOutputKgtkewangan8");
+  var txtOutputKgtkewangan9 = document.getElementById("txtOutputKgtkewangan9");
+  var txtOutputKgtkewangan10 = document.getElementById("txtOutputKgtkewangan10");
+  var txtOutputKgtkewangan11= document.getElementById("txtOutputKgtkewangan11");
+  var txtOutputKgtkewangan12 = document.getElementById("txtOutputKgtkewangan12");
+  var txtOutputKgtkewangan13 = document.getElementById("txtOutputKgtkewangan13");
+
 
 
   var name = txtName.value;
+  var gred = txtGred.value;
+  var bulanbulan = txtBulan.value;
   var ic = txtIc.value;
   var Gaji = parseFloat(txtGaji.value);
   var Elaun = parseFloat(txtElaun.value);
@@ -355,6 +385,34 @@ body {padding:30px}
   //TarikhBulan 14
   TarikhBulan24Akhir =  TarikhBulan24Lem1 + "/" + TarikhBulan24Lem2Darab + "/" + TarikhBulan24Lem3;
 
+  TarikhBulan30Lem1 = Lem1 - 1;
+  TarikhBulan30Lem2 = Lem2 + 30;
+  TarikhBulan30Lem2Bahagi = parseInt(TarikhBulan30Lem2 / 12);
+  //bulan
+  TarikhBulan30Lem2Darab = TarikhBulan30Lem2 - (12 * TarikhBulan30Lem2Bahagi );
+  if (TarikhBulan30Lem2Darab == "0")
+  {
+    TarikhBulan30Lem2Darab = Lem2;
+  }
+  //tahun
+  TarikhBulan30Lem3 = Lem3 + TarikhBulan30Lem2Bahagi;
+  //TarikhBulan 14
+  TarikhBulan30Akhir =  TarikhBulan30Lem1 + "/" + TarikhBulan30Lem2Darab + "/" + TarikhBulan30Lem3;
+
+  TarikhBulan36Lem1 = Lem1 - 1;
+  TarikhBulan36Lem2 = Lem2 + 36;
+  TarikhBulan36Lem2Bahagi = parseInt(TarikhBulan36Lem2 / 12);
+  //bulan
+  TarikhBulan36Lem2Darab = TarikhBulan36Lem2 - (12 * TarikhBulan36Lem2Bahagi );
+  if (TarikhBulan36Lem2Darab == "0")
+  {
+    TarikhBulan36Lem2Darab = Lem2;
+  }
+  //tahun
+  TarikhBulan36Lem3 = Lem3 + TarikhBulan36Lem2Bahagi;
+  //TarikhBulan 14
+  TarikhBulan36Akhir =  TarikhBulan36Lem1 + "/" + TarikhBulan36Lem2Darab + "/" + TarikhBulan36Lem3;
+
 
   
   Emolumen = Gaji+ Elaun;
@@ -372,17 +430,113 @@ body {padding:30px}
   Denda6= ((Emolumen/30)*6);
   Denda7= ((Emolumen/30)*7);
 
+  if (gred == "41")
+  {
+    kgt = 225;
+    kgt2 = 225 *2;
+    kgt3 = 225 * 3;
 
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+
+  
+
+
+  if (bulanbulan == "Januari")
+  {
+    Bulan1 = "April";
+    Bulan2 = "Julai";
+    Bulan3 = "October";
+    Bulan4 = "Januari";
+  }
+  else if(bulanbulan == "April")
+  {
+    Bulan1 = "Julai";
+    Bulan2 = "Oktober";
+    Bulan3 = "Januari";
+    Bulan4 = "April";
+  }
+  else if(bulanbulan == "Julai")
+  {
+    Bulan1 = "Oktober";
+    Bulan2 = "Januari";
+    Bulan3 = "April";
+    Bulan4 = "Julai";
+  }
+  else
+  {
+    Bulan1 = "Januari";
+    Bulan2 = "April";
+    Bulan3 = "Julai";
+    Bulan4 = "Oktober";
+  }
+
+  if (Lem2 == "1" || Lem2 == "2" || Lem2 == "3")
+   {
+     Bulan5 = "April";
+   }
+   else if (Lem2 == "4" || Lem2 == "5" || Lem2 == "6")
+   {
+     Bulan5 = "Julai";
+   }
+   else if (Lem2 == "7" || Lem2 == "8" || Lem2 == "9")
+   {
+     Bulan5 = "Oktober";
+   }
+   else 
+   {
+     Bulan5 = "Januari";
+   }
+
+  txtOutputKgtkewangan1.value = kgtkewangan1;
+  txtOutputKgtkewangan2.value = kgtkewangan2;
+  txtOutputKgtkewangan3.value = kgtkewangan3;
+  txtOutputKgtkewangan4.value = kgtkewangan4;
+  txtOutputKgtkewangan5.value = kgtkewangan5;
+  txtOutputKgtkewangan6.value = kgtkewangan6;
+  txtOutputKgtkewangan7.value = kgtkewangan7;
+  txtOutputKgtkewangan8.value = kgtkewangan8;
+  txtOutputKgtkewangan9.value = kgtkewangan9;
+  txtOutputKgtkewangan10.value = kgtkewangan10;
+  txtOutputKgtkewangan11.value = kgtkewangan11;
+  txtOutputKgtkewangan12.value = kgtkewangan12;
+  txtOutputKgtkewangan13.value = kgtkewangan13;
+  txtOutputKgt.value = kgt;
+  txtOutputKgt2.value = kgt2;
+  txtOutputKgt3.value = kgt3;
+  txtOutputBulan1.value = Bulan1;
+  txtOutputBulan2.value = Bulan2;
+  txtOutputBulan3.value = Bulan3;
+  txtOutputBulan4.value = Bulan4;
+  txtOutputBulan5.value = Bulan5;
   txtOutputEmolumenKewangan.value = EmolumenKewangan.toFixed(2);;
   txtOutputLem1.value = Lem1;
   txtOutputLem2.value = Lem2;
   txtOutputLem3.value = TarikhBulan;
   txtOutputName.value = name;
+  txtOutputGred.value = gred;
   txtOutputIc.value = ic;
   txtOutputKetidakhadiran.value = Ketidakhadiran;
   txtOutputEmolumen.value = Emolumen;
   txtOutputBulan18.value = TarikhBulan18Akhir;
   txtOutputBulan24.value = TarikhBulan24Akhir;
+  txtOutputBulan30.value = TarikhBulan30Akhir;
+  txtOutputBulan36.value = TarikhBulan36Akhir;
   txtOutputDenda1.value = Denda1.toFixed(2);
   txtOutputDenda2.value = Denda2.toFixed(2);
   txtOutputDenda3.value = Denda3.toFixed(2);
@@ -423,6 +577,8 @@ body {padding:30px}
           <input type = "text" id = "txtOutputName" size="40" disabled/>
           <br>
          <input type = "text" id = "txtOutputIc" size="40" disabled/>
+         <input type = "text" id = "txtOutputGred" size="40" disabled/>
+         
          <input type = "text" id = "txtOutputLem1" size="40" disabled hidden />
          <input type = "text" id = "txtOutputLem2" size="40" disabled hidden />
 
@@ -519,28 +675,28 @@ body {padding:30px}
       3 Bulan <br>
     </td>
     <td>
-      810.00 <br>
+      <input type = "text" id = "txtOutputKgtkewangan10" size="15" disabled  /> <br>
     </td>
     <td rowspan="4">30</td>
-    <td rowspan="4">??</td>
-    <td>??</td>
+    <td rowspan="4"><input type = "text" id = "txtOutputBulan30" size="20" disabled  /></td>
+    <td><input type = "text" id = "txtOutputBulan1" size="20" disabled  /></td>
     </tr>
 
     <tr>
       <td>6 Bulan <br></td>
-      <td>1620.00</td>
-      <td>??</td>
+      <td><input type = "text" id = "txtOutputKgtkewangan11" size="15" disabled  /></td>
+      <td><input type = "text" id = "txtOutputBulan2" size="20" disabled  /></td>
     </tr>
 
     <tr>
       <td>9 Bulan <br></td>
-      <td>1620.00</td>
-      <td>??</td>
+      <td><input type = "text" id = "txtOutputKgtkewangan12" size="15" disabled  /></td>
+      <td><input type = "text" id = "txtOutputBulan3" size="20" disabled  /></td>
     </tr>
     <tr>
       <td>12 Bulan <br></td>
-      <td>1620.00</td>
-      <td>??</td>
+      <td><input type = "text" id = "txtOutputKgtkewangan13" size="15" disabled  /></td>
+      <td><input type = "text" id = "txtOutputBulan4" size="20" disabled  /></td>
     </tr>
 
 
@@ -554,63 +710,63 @@ body {padding:30px}
       1 <br>
     </td>
     <td> 12 Bulan</td>
-    <td>??</td>
+    <td><input type = "text" id = "txtOutputKgtkewangan1" size="15" disabled  /></td>
     <td rowspan="9">36</td>
-    <td rowspan="9">??</td>
-    <td rowspan="9"> ???</td>
+    <td rowspan="9"><input type = "text" id = "txtOutputBulan36" size="20" disabled  /></td>
+    <td rowspan="9"> <input type = "text" id = "txtOutputBulan5" size="20" disabled  /></td>
     </tr>
 
     <tr>
       <td> Atas Gaji Min **</td>
-      <td>270.00</td>
+      <td><input type = "text" id = "txtOutputKgt" size="20" disabled  /></td>
       <td>24 Bulan</td>
-      <td>??</td>
+      <td><input type = "text" id = "txtOutputKgtkewangan2" size="15" disabled  /></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
       <td>36 Bulan</td>
-      <td>??</td>
+      <td><input type = "text" id = "txtOutputKgtkewangan3" size="15" disabled  /></td>
     </tr>
 
     <tr>
       <td> Bil. Pergerakan</td>
       <td>2</td>
       <td>12 Bulan</td>
-      <td>??</td>
+      <td><input type = "text" id = "txtOutputKgtkewangan4" size="15" disabled  /></td>
     </tr>
 
     <tr>
       <td> Atas Gaji Min **</td>
-      <td>540.00</td>
+      <td><input type = "text" id = "txtOutputKgt2" size="20" disabled  /></td>
       <td>24 Bulan</td>
-      <td>??</td>
+      <td><input type = "text" id = "txtOutputKgtkewangan5" size="15" disabled  /></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
       <td>36 Bulan</td>
-      <td>??</td>
+      <td><input type = "text" id = "txtOutputKgtkewangan6" size="15" disabled  /></td>
     </tr>
 
 <tr>
       <td> Bil. Pergerakan</td>
       <td>3</td>
       <td>12 Bulan</td>
-      <td>??</td>
+      <td><input type = "text" id = "txtOutputKgtkewangan7" size="15" disabled  /></td>
     </tr>
 
     <tr>
       <td> Atas Gaji Min **</td>
-      <td>810.00</td>
+      <td><input type = "text" id = "txtOutputKgt3" size="20" disabled  /></td>
       <td>24 Bulan</td>
-      <td>??</td>
+      <td><input type = "text" id = "txtOutputKgtkewangan8" size="15" disabled  /></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
       <td>36 Bulan</td>
-      <td>??</td>
+      <td><input type = "text" id = "txtOutputKgtkewangan9" size="15" disabled  /></td>
     </tr>
 
       

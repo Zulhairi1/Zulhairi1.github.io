@@ -22,7 +22,8 @@ table {
 }
 
 table,td{
-  border: 2px solid grey;
+  border: 0.2px solid white;
+
 }
 
 .table1,.td1{
@@ -54,7 +55,7 @@ body {padding:30px}
 <table class="table1">
   <center>
   <td class="td1" colspan="3">
- <h2 align="center">Kalkulator Simulasi Hukuman Tatatertib</h2>
+ <h2 align="center"  >Kalkulator Simulasi Hukuman Tatatertib</h2>
 <!--Heading untuk Maklumat Pegawai-->
  <h3  align="center">Maklumat Pegawai</h3>
 </td>
@@ -288,6 +289,7 @@ body {padding:30px}
   //declare input variable
   var txtName = document.getElementById("txtName");
   var txtGred = document.getElementById("txtGred");
+  var txtSkim = document.getElementById("txtSkim");
   var txtIc = document.getElementById("txtIc");
   var txtGaji = document.getElementById("txtGaji");
   var txtElaun = document.getElementById("txtElaun");
@@ -348,6 +350,7 @@ body {padding:30px}
 
   var name = txtName.value;
   var gred = txtGred.value;
+  var skim = txtSkim.value;
   var bulanbulan = txtBulan.value;
   var ic = txtIc.value;
   var Gaji = parseFloat(txtGaji.value);
@@ -962,6 +965,7 @@ body {padding:30px}
    {
      Bulan5 = "Januari";
    }
+   skimgred = skim + " " + gred;
 
   txtOutputKgtkewangan1.value = kgtkewangan1;
   txtOutputKgtkewangan2.value = kgtkewangan2;
@@ -989,7 +993,7 @@ body {padding:30px}
   txtOutputLem2.value = Lem2;
   txtOutputLem3.value = TarikhBulan;
   txtOutputName.value = name;
-  txtOutputGred.value = gred;
+  txtOutputGred.value = skimgred;
   txtOutputIc.value = ic;
   txtOutputKetidakhadiran.value = Ketidakhadiran;
   txtOutputEmolumen.value = Emolumen;
@@ -1007,6 +1011,9 @@ body {padding:30px}
  
 
 }
+ 
+
+
 </script>
 
 
@@ -1025,20 +1032,20 @@ body {padding:30px}
   <table border="1">
     <center>
     <tr>
-      <td align="center" colspan="8">SIMULASI HUKUMAN</td>
+      <td align="center" colspan="8" bgcolor="#3a84bd"><b><p style="color:white; font-size:16px;">SIMULASI HUKUMAN </p></b></td>
     </tr>
     <TR>
-      <td align="center"  colspan="8">Lembaga Perkhidmatan Awam</td>
+      <td align="center"  colspan="8" bgcolor="#3a84bd"><b><p style="color:white; font-size:16px;">Lembaga Perkhidmatan Awam</p></b></td>
     </TR>
     <tr>
      
       <td   colspan="3" bgcolor="#99d6ff">
          <font face="Verdana" size="1">
-          <input type = "text" id = "txtOutputName" size="40" disabled/>
+          <p style="color:white; font-size:12px;"><input type = "text" id = "txtOutputName" size="44.5" disabled/> 
           <br>
-         <input type = "text" id = "txtOutputIc" size="40" disabled/>
-         <input type = "text" id = "txtOutputGred" size="40" disabled/>
-         
+         <input type = "text" id = "txtOutputIc" size="15" disabled/>
+         <input type = "text" id = "txtOutputGred" size="15" disabled/>
+         </p>
          <input type = "text" id = "txtOutputLem1" size="40" disabled hidden />
          <input type = "text" id = "txtOutputLem2" size="40" disabled hidden />
 
@@ -1048,185 +1055,183 @@ body {padding:30px}
       </font>
       </td>
 
-      <td>
+      <td align="center" bgcolor="#3a84bd"><p style="color:white; font-size:14px;">
         TEMPOH
-      </td>
-      <td>
+      </p></td>
+      <td align="center" bgcolor="#3a84bd"><p style="color:white; font-size:14px;">
         IMPLIKASI KEWANGAN
-      </td>
-      <td colspan="2">
+      </p></td>
+      <td align="center" bgcolor="#3a84bd" colspan="2"><p style="color:white; font-size:14px;">
         TEMPOH & TARIKH TIDAK LAYAK NAIK PANGKAT
-      </td>
-      <td>
+      </p></td>
+      <td align="center" bgcolor="#3a84bd"><p style="color:white; font-size:14px;">
         TARIKH PERGERAKAN GAJI
-      </td>
+     </p> </td>
     </tr>
 
     <tr>
-      <td colspan="3">AMARAN</td>
-    <td>Tiada</td>
-    <td>Tiada</td>
-    <td>12</td>
-    <td><input type = "text" id = "txtOutputLem3" size="20" disabled/></td>
-    <td>Tidak Berubah</td>
+      <td colspan="3" align="center" bgcolor="#C6E0B4"><p style="color:black; font-size:14px;">AMARAN</p></td>
+    <td  align="center" bgcolor="#C6E0B4"><p style="color:black; font-size:14px;">Tiada</p></td>
+    <td  align="center" bgcolor="#C6E0B4"><p style="color:black; font-size:14px;">Tiada</p></td>
+    <td  align="center" bgcolor="#C6E0B4"><p style="color:black; font-size:14px;">12</p></td>
+    <td  align="center" bgcolor="#C6E0B4"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputLem3" size="10" disabled/></p></td>
+    <td  align="center" bgcolor="#C6E0B4"><p style="color:black; font-size:14px;">Tidak Berubah</p></td>
     </tr>
   
    <tr>
-      <td colspan="3" rowspan="7">DENDA</td>
-    <td>
-      1 Hari <br>
+    <td  colspan="3" rowspan="7" align="center" bgcolor="#BDD7EE"><p style="color:black; font-size:14px;">DENDA</td>
+    <td align="center" bgcolor="#BDD7EE"><p style="color:black; font-size:14px;">
+      1 Hari </p>
     
     </td>
-    <td>
-      <input type = "text" id = "txtOutputDenda1" size="20" disabled/> <br>
-      
-      
-      
-      
+    <td align="center" bgcolor="#BDD7EE"> 
+      <input type = "text" id = "txtOutputDenda1" size="10" disabled/><br>
       
       
     </td>
-    <td rowspan="7">18</td>
-    <td rowspan="7" ><input type = "text" id = "txtOutputBulan18" size="10" disabled/> </td>
-    <td rowspan="7">Tidak Berubah</td>
+    <td align="center" bgcolor="#BDD7EE" rowspan="7"> <p style="color:black; font-size:14px;">18</p></td>
+    <td align="center" bgcolor="#BDD7EE" rowspan="7"> <p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputBulan18" size="10" disabled/> </td>
+    <td  rowspan="7" align="center" bgcolor="#BDD7EE"><p style="color:black; font-size:14px;">Tidak Berubah </p></td>
     </tr>
 
     <tr>
-      <td>2 Hari</td>
-      <td><input type = "text" id = "txtOutputDenda2" size="20" disabled/> <br></td>
+      <td align="center" bgcolor="#BDD7EE"><p style="color:black; font-size:14px;">2 Hari</p></td>
+      <td align="center" bgcolor="#BDD7EE"><input type = "text" id = "txtOutputDenda2" size="10" disabled/> </td>
     </tr>
     <tr>
-      <td>3 Hari</td>
-      <td><input type = "text" id = "txtOutputDenda3" size="20" disabled/> <br> <br></td>
+      <td align="center" bgcolor="#BDD7EE"><p style="color:black; font-size:14px;">3 Hari</p></td>
+      <td align="center" bgcolor="#BDD7EE"><input type = "text" id = "txtOutputDenda3" size="10" disabled/> </td>
     </tr>
     <tr>
-      <td>4 Hari</td>
-      <td><input type = "text" id = "txtOutputDenda4" size="20" disabled/> <br> <br></td>
+     <td align="center" bgcolor="#BDD7EE"><p style="color:black; font-size:14px;">4 Hari</p></td>
+      <td align="center" bgcolor="#BDD7EE"><input type = "text" id = "txtOutputDenda4" size="10" disabled/> </td>
     </tr>
     <tr>
-      <td>5 Hari</td>
-      <td><input type = "text" id = "txtOutputDenda5" size="20" disabled/> <br><br></td>
+      <td align="center" bgcolor="#BDD7EE"><p style="color:black; font-size:14px;">5 Hari</p></td>
+      <td align="center" bgcolor="#BDD7EE"><input type = "text" id = "txtOutputDenda5" size="10" disabled/> </td>
     </tr>
     <tr>
-      <td>6 Hari</td>
-      <td><input type = "text" id = "txtOutputDenda6" size="20" disabled/> <br> <br></td>
+      <td align="center" bgcolor="#BDD7EE"><p style="color:black; font-size:14px;">6 Hari</p></td>
+      <td align="center" bgcolor="#BDD7EE"><input type = "text" id = "txtOutputDenda6" size="10" disabled/> </td>
     </tr>
     <tr>
-      <td>7 Hari</td>
-      <td><input type = "text" id = "txtOutputDenda7" size="20" disabled/> <br> <br></td>
+      <td align="center" bgcolor="#BDD7EE"><p style="color:black; font-size:14px;">7 Hari</p></td>
+      <td align="center" bgcolor="#BDD7EE"><input type = "text" id = "txtOutputDenda7" size="10" disabled/> </td>
     </tr>
 
     <!--Lucut-->
 
     <tr>
-      <td colspan="3">
+      <td colspan="3" align="center" bgcolor="#F8CBAD"><p style="color:black; font-size:14px;">
       LUCUT HAK EMOLUMEN
+    </p>
     </td>
-    <td><input type = "text" id = "txtOutputKetidakhadiran" size="6" disabled  /></td>
-    <td><input type = "text" id = "txtOutputEmolumenKewangan" size="20" disabled  /></td>
-    <td>24</td>
-    <td><input type = "text" id = "txtOutputBulan24" size="20" disabled  /></td>
-    <td>Tidak Berubah</td>
+    <td  align="center" bgcolor="#F8CBAD"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKetidakhadiran" size="6" disabled  /></td>
+    <td  align="center" bgcolor="#F8CBAD"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputEmolumenKewangan" size="12" disabled  /></td>
+    <td  align="center" bgcolor="#F8CBAD"><p style="color:black; font-size:14px;">24</p></td>
+    <td  align="center" bgcolor="#F8CBAD"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputBulan24" size="10" disabled  /></td>
+    <td  align="center" bgcolor="#F8CBAD"><p style="color:black; font-size:14px;">Tidak Berubah</td>
     </tr>
 
     <tr>
-      <td colspan="3" rowspan="4">TANGGUH PERGERAKAN GAJI</td>
-    <td>
-      3 Bulan <br>
+     <td colspan="3" rowspan="4" align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;">TANGGUH PERGERAKAN GAJI</p></td>
+    <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;">
+      3 Bulan </p>
     </td>
-    <td>
-      <input type = "text" id = "txtOutputKgtkewangan10" size="15" disabled  /> <br>
+    <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;">
+      <input type = "text" id = "txtOutputKgtkewangan10" size="12" disabled  /> </p>
     </td>
-    <td rowspan="4">30</td>
-    <td rowspan="4"><input type = "text" id = "txtOutputBulan30" size="20" disabled  /></td>
-    <td><input type = "text" id = "txtOutputBulan1" size="20" disabled  /></td>
+    <td  rowspan="4"align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;">30</p></td>
+    <td  rowspan="4" align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;"> <input type = "text" id = "txtOutputBulan30" size="10" disabled  /></td>
+
+    <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputBulan1" size="20" disabled  /></td>
     </tr>
 
     <tr>
-      <td>6 Bulan <br></td>
-      <td><input type = "text" id = "txtOutputKgtkewangan11" size="15" disabled  /></td>
-      <td><input type = "text" id = "txtOutputBulan2" size="20" disabled  /></td>
+      <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;">6 Bulan </td>
+      <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan11" size="12" disabled  /></td>
+      <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputBulan2" size="20" disabled  /></td>
     </tr>
 
     <tr>
-      <td>9 Bulan <br></td>
-      <td><input type = "text" id = "txtOutputKgtkewangan12" size="15" disabled  /></td>
-      <td><input type = "text" id = "txtOutputBulan3" size="20" disabled  /></td>
+      <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;">9 Bulan </td>
+      <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan12" size="12" disabled  /></td>
+      <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputBulan3" size="20" disabled  /></td>
     </tr>
     <tr>
-      <td>12 Bulan <br></td>
-      <td><input type = "text" id = "txtOutputKgtkewangan13" size="15" disabled  /></td>
-      <td><input type = "text" id = "txtOutputBulan4" size="20" disabled  /></td>
+      <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;">12 Bulan </td>
+      <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan13" size="12" disabled  /></td>
+      <td  align="center" bgcolor="#FFE699"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputBulan4" size="20" disabled  /></td>
     </tr>
 
 
 
     <tr>
-      <td rowspan="9">TURUN GAJI </td>
-    <td>
+      <td  rowspan="9" align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">TURUN GAJI </td>
+    <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">
       Bil. Pergerakan <br>
     </td>
-    <td>
-      1 <br>
+    <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">
+      1 
     </td>
-    <td> 12 Bulan</td>
-    <td><input type = "text" id = "txtOutputKgtkewangan1" size="15" disabled  /></td>
-    <td rowspan="9">36</td>
-    <td rowspan="9"><input type = "text" id = "txtOutputBulan36" size="20" disabled  /></td>
-    <td rowspan="9"> <input type = "text" id = "txtOutputBulan5" size="20" disabled  /></td>
+    <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"> 12 Bulan</td>
+    <td  align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan1" size="12" disabled  /></td>
+    <td  rowspan="9" align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">36</td>
+    <td  rowspan="9" align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputBulan36" size="12" disabled  /></td>
+    <td  rowspan="9" align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"> <input type = "text" id = "txtOutputBulan5" size="20" disabled  /></td>
     </tr>
 
     <tr>
-      <td> Atas Gaji Min **</td>
-      <td><input type = "text" id = "txtOutputKgt" size="20" disabled  /></td>
-      <td>24 Bulan</td>
-      <td><input type = "text" id = "txtOutputKgtkewangan2" size="15" disabled  /></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"> Atas Gaji Min **</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgt" size="6" disabled  /></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">24 Bulan</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan2" size="12" disabled  /></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td>36 Bulan</td>
-      <td><input type = "text" id = "txtOutputKgtkewangan3" size="15" disabled  /></td>
-    </tr>
-
-    <tr>
-      <td> Bil. Pergerakan</td>
-      <td>2</td>
-      <td>12 Bulan</td>
-      <td><input type = "text" id = "txtOutputKgtkewangan4" size="15" disabled  /></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">36 Bulan</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan3" size="12" disabled  /></td>
     </tr>
 
     <tr>
-      <td> Atas Gaji Min **</td>
-      <td><input type = "text" id = "txtOutputKgt2" size="20" disabled  /></td>
-      <td>24 Bulan</td>
-      <td><input type = "text" id = "txtOutputKgtkewangan5" size="15" disabled  /></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"> Bil. Pergerakan</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">2</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">12 Bulan</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan4" size="12" disabled  /></td>
+    </tr>
+
+    <tr>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"> Atas Gaji Min **</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgt2" size="6" disabled  /></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">24 Bulan</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan5" size="12" disabled  /></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td>36 Bulan</td>
-      <td><input type = "text" id = "txtOutputKgtkewangan6" size="15" disabled  /></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">36 Bulan</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan6" size="12" disabled  /></td>
     </tr>
 
 <tr>
-      <td> Bil. Pergerakan</td>
-      <td>3</td>
-      <td>12 Bulan</td>
-      <td><input type = "text" id = "txtOutputKgtkewangan7" size="15" disabled  /></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"> Bil. Pergerakan</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">3</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">12 Bulan</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan7" size="12" disabled  /></td>
     </tr>
 
     <tr>
-      <td> Atas Gaji Min **</td>
-      <td><input type = "text" id = "txtOutputKgt3" size="20" disabled  /></td>
-      <td>24 Bulan</td>
-      <td><input type = "text" id = "txtOutputKgtkewangan8" size="15" disabled  /></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"> Atas Gaji Min **</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgt3" size="6" disabled  /></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">24 Bulan</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan8" size="12" disabled  /></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td>36 Bulan</td>
-      <td><input type = "text" id = "txtOutputKgtkewangan9" size="15" disabled  /></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"></td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;">36 Bulan</td>
+      <td   align="center" bgcolor="#FF99CC"><p style="color:black; font-size:14px;"><input type = "text" id = "txtOutputKgtkewangan9" size="12" disabled  /></td>
     </tr>
 
       

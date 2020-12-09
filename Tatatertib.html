@@ -1,46 +1,28 @@
-
 <!DOCTYPE html>
 <html>
- <style>
-  .button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.button1 {font-size: 10px;background-color: #008CBA;}
-
-
-table {
-  border-collapse: collapse;
-}
-
-table,td{
-  border: 1px solid blue;
-}
-
-.table1,.td1{
-  border: 3px solid black;
-  width: 50%; 
-}
-
-body {padding:30px}
-.print-area {border:1px solid red;padding:1em;margin:0 0 1em}
-</style>
-<title>Kalkulator Simulasi Hukuman Tatatertib</title>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
 
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1900px;">
 
-<body >
-
-  <div class="w3-top">
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
     <div class="w3-col s3">
       <a href="ASK.html" class="w3-button w3-block w3-black">KALKULATOR DASAR PEMISAH</a>
@@ -52,8 +34,8 @@ body {padding:30px}
 <center>
  <!--Heading untuk Kalkulator Exit Policy-->
 <table class="table1">
-	<center>
-	<td class="td1" colspan="3">
+  <center>
+  <td class="td1" colspan="3">
  <h2 align="center">Kalkulator Simulasi Hukuman Tatatertib</h2>
 <!--Heading untuk Maklumat Pegawai-->
  <h3  align="center">Maklumat Pegawai</h3>
@@ -273,14 +255,15 @@ body {padding:30px}
  </form>
 
 
+          
+          <br>
+        </div>
+      </div><br>
 
+    <!-- End Left Column -->
+    </div>
 
-
-
-
-
-
-<script>
+    <script>
  function saySubmit(){
 
   
@@ -288,6 +271,7 @@ body {padding:30px}
   //declare input variable
   var txtName = document.getElementById("txtName");
   var txtGred = document.getElementById("txtGred");
+  var txtSkim = document.getElementById("txtSkim");
   var txtIc = document.getElementById("txtIc");
   var txtGaji = document.getElementById("txtGaji");
   var txtElaun = document.getElementById("txtElaun");
@@ -348,6 +332,7 @@ body {padding:30px}
 
   var name = txtName.value;
   var gred = txtGred.value;
+  var skim = txtSkim.value;
   var bulanbulan = txtBulan.value;
   var ic = txtIc.value;
   var Gaji = parseFloat(txtGaji.value);
@@ -430,11 +415,471 @@ body {padding:30px}
   Denda6= ((Emolumen/30)*6);
   Denda7= ((Emolumen/30)*7);
 
-  if (gred == "41")
+  if (gred =="1" || gred =="2" || gred =="3" || gred =="4" || gred =="5" || gred =="6" || gred =="7" || gred =="8" || gred =="9" || gred =="10" || gred =="11" || gred =="12")
+  {
+    kgt = 80;
+    kgt2 = 80 *2;
+    kgt3 = 80 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "13" ||gred == "14")
+  {
+    kgt = 90;
+    kgt2 = 90 *2;
+    kgt3 = 90 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "16" ||gred == "17")
+  {
+    kgt = 95;
+    kgt2 = 95 *2;
+    kgt3 = 95 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "18" ||gred == "19")
+  {
+    kgt = 100;
+    kgt2 = 100 *2;
+    kgt3 = 100* 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "20")
+  {
+    kgt = 105;
+    kgt2 = 105 *2;
+    kgt3 = 105* 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "21" ||gred == "22")
+  {
+    kgt = 115;
+    kgt2 = 115 *2;
+    kgt3 = 115* 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "24" )
+  {
+    kgt = 120;
+    kgt2 = 120 *2;
+    kgt3 = 120 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "25" ||gred == "26")
+  {
+    kgt = 125;
+    kgt2 = 125 *2;
+    kgt3 = 125 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "27" ||gred == "28")
+  {
+    kgt = 130;
+    kgt2 = 130 *2;
+    kgt3 = 130 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "29" ||gred == "30")
+  {
+    kgt = 145;
+    kgt2 = 145 *2;
+    kgt3 = 145 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "31" ||gred == "32")
+  {
+    kgt = 155;
+    kgt2 = 155 *2;
+    kgt3 = 155 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "33" ||gred == "34")
+  {
+    kgt = 165;
+    kgt2 = 165 *2;
+    kgt3 = 165 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "35" ||gred == "36")
+  {
+    kgt = 180;
+    kgt2 = 180 *2;
+    kgt3 = 180 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "37" ||gred == "38")
+  {
+    kgt = 195;
+    kgt2 = 195 *2;
+    kgt3 = 195 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "39" || gred == "40" || gred == "41"|| gred =="42")
   {
     kgt = 225;
     kgt2 = 225 *2;
     kgt3 = 225 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "44" || gred =="43")
+  {
+    kgt = 250;
+    kgt2 = 250 *2;
+    kgt3 = 250 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "45" || gred =="46")
+  {
+    kgt = 255;
+    kgt2 = 255 *2;
+    kgt3 = 255 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "47" || gred == "48" )
+  {
+    kgt = 270;
+    kgt2 = 270 *2;
+    kgt3 = 270 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "51" || gred == "52")
+  {
+    kgt = 290;
+    kgt2 = 290 *2;
+    kgt3 = 290 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else if (gred == "53" || gred == "54")
+  {
+    kgt = 320;
+    kgt2 = 320 *2;
+    kgt3 = 320 * 3;
+
+    kgtkewangan1 = kgt * 12;
+    kgtkewangan2 = kgt * 24;
+    kgtkewangan3 = kgt * 36;
+
+    kgtkewangan4 = kgt2 * 12;
+    kgtkewangan5 = kgt2 * 24;
+    kgtkewangan6 = kgt2 * 36;
+
+    kgtkewangan7 = kgt3 * 12;
+    kgtkewangan8 = kgt3 * 24;
+    kgtkewangan9 = kgt3 * 36;
+
+    kgtkewangan10 = kgt * 3;
+    kgtkewangan11 = kgt * 6;
+    kgtkewangan12 = kgt * 9;
+    kgtkewangan13 = kgt * 12;
+  }
+  else 
+  {
+    kgt = 0;
+    kgt2 = 0 *2;
+    kgt3 = 0 * 3;
 
     kgtkewangan1 = kgt * 12;
     kgtkewangan2 = kgt * 24;
@@ -502,6 +947,7 @@ body {padding:30px}
    {
      Bulan5 = "Januari";
    }
+   skimgred = skim + " " + gred;
 
   txtOutputKgtkewangan1.value = kgtkewangan1;
   txtOutputKgtkewangan2.value = kgtkewangan2;
@@ -529,7 +975,7 @@ body {padding:30px}
   txtOutputLem2.value = Lem2;
   txtOutputLem3.value = TarikhBulan;
   txtOutputName.value = name;
-  txtOutputGred.value = gred;
+  txtOutputGred.value = skimgred;
   txtOutputIc.value = ic;
   txtOutputKetidakhadiran.value = Ketidakhadiran;
   txtOutputEmolumen.value = Emolumen;
@@ -549,11 +995,11 @@ body {padding:30px}
 }
 </script>
 
-
-
-
-
-
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        
 
     <p style="color:red; font-size:16px;">Ruangan ini diisi secara automatik</p>
        
@@ -781,9 +1227,29 @@ body {padding:30px}
 
   
  </form>
+</div>
 
 
-      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
 
 </body>
-</html>
+</html
+

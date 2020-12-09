@@ -30,6 +30,10 @@ table,td{
   border: 3px solid black;
   width: 50%; 
 }
+.table2,.td2,.tr2{
+  border: 3px solid black;
+  width: 40%; 
+}
 
 body {padding:30px}
 .print-area {border:1px solid red;padding:1em;margin:0 0 1em}
@@ -52,40 +56,43 @@ body {padding:30px}
 <br><br><br><br>
 <center>
  <!--Heading untuk Kalkulator Exit Policy-->
-<table class="table1">
-  <center>
-  <td class="td1" colspan="3">
- <h2 align="center"  >Kalkulator Simulasi Hukuman Tatatertib</h2>
+
+  
+    
+<center>
+ <img src="jata.png" alt="Jata Negara" width="170" height="120"><h2 align="center"  >Kalkulator Simulasi Hukuman Tatatertib</h2>
 <!--Heading untuk Maklumat Pegawai-->
  <h3  align="center">Maklumat Pegawai</h3>
-</td>
+
+ <hr class="w3-border-black" style="margin:auto;width:50%">
+
 </center>
-</table>
+
 <br><br>
  <!--Jadual Maklumat Pegawai-->
  <form id="form" name="myForm" onsubmit="return saySubmit()">
-  <table border="1" bgcolor="#dfe5eb">
-    <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+  <table class="table2" border="1" bgcolor="#dfe5eb">
+    <tr class="tr2">
+      <td class="td2"align="left" bgcolor="#dfe5eb" width="347" height="20">
          Nama 
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
          <input type = "text" id = "txtName" width="555" maxlength="200" size="40"/> <br>
       </td>
     </tr>
-     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+     <tr class="tr2">
+      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
         <label>No Kad Pengenalan <br> </label>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
          <input type = "text" id = "txtIc" maxlength="14" width="555" maxlength="200" size="40" placeholder="000000-00-0000"/> <br>
       </td>
     </tr>
-    <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+    <tr class="tr2">
+      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
         <label>Skim <br> </label>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
          <select  id="txtSkim">
               <option value="A">A</option>
               <option value="B">B</option>
@@ -117,11 +124,11 @@ body {padding:30px}
           </select>
       </td>
     </tr>
-     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+     <tr class="tr2">
+      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
           <label for="gred">Gred</label>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
           <select  id="txtGred">
               <option value="1"> 1</option>
               <option value="2"> 2</option>
@@ -189,11 +196,11 @@ body {padding:30px}
           </select>
       </td>
     </tr>
-     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+     <tr class="tr2">
+      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
          Tarikh Lembaga Tatatertib: 
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
          <input type = "text" id="txtLem1"  maxlength="2" size="2" placeholder="00">
                 &nbsp;/
         <input type = "text" id="txtLem2"  maxlength="2"  size="2" placeholder="00">
@@ -201,11 +208,11 @@ body {padding:30px}
         <input type = "text" id="txtLem3"  maxlength="4"  size="4" placeholder="0000">
       </td>
     </tr>
-     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+     <tr class="tr2">
+      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
         TPG 
       </td>
-      <td  colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td  class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
             
 
 
@@ -218,49 +225,49 @@ body {padding:30px}
               
       </td>
     </tr>
-    <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+    <tr class="tr2">
+      <td class="td2"  align="left" bgcolor="#dfe5eb" width="347" height="20">
          Gaji Pokok: 
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
          RM <input type = "text" id="txtGaji"  value="0" >  
       </td>
     </tr>
 
-    <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+    <tr class="tr2">
+      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
          Elaun: 
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
          RM <input type = "text" id="txtElaun"  value="0" >  
       </td>
     </tr>
      <form action = "" id="result">
-     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+     <tr class="tr2">
+      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
          Emolumen: 
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
          RM <input type = "text" id = "txtOutputEmolumen" size="10" disabled/> 
 
       </td>
     </tr>
   </form>
     
-    <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+    <tr class="tr2">
+      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
          Gaji Minimum 
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
         RM <input type = "text" id="txtCutiRehat" maxlength="8" value="0" >
               
       </td>
     </tr>
-    <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+    <tr class="tr2">
+      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
          Jumlah Ketidakhadiran: 
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
          Hari <input type = "text" id="txtKetidakhadiran"  value="0" >  
       </td>
     </tr>

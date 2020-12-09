@@ -1,28 +1,46 @@
+
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+ <style>
+  .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {font-size: 10px;background-color: #008CBA;}
+
+
+table {
+  border-collapse: collapse;
+}
+
+table,td{
+  border: 2px solid grey;
+}
+
+.table1,.td1{
+  border: 3px solid black;
+  width: 50%; 
+}
+
+body {padding:30px}
+.print-area {border:1px solid red;padding:1em;margin:0 0 1em}
 </style>
-<body class="w3-light-grey">
+<title>Kalkulator Simulasi Hukuman Tatatertib</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1900px;">
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <div class="w3-top">
+<body >
+
+  <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
     <div class="w3-col s3">
       <a href="ASK.html" class="w3-button w3-block w3-black">KALKULATOR DASAR PEMISAH</a>
@@ -255,15 +273,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
  </form>
 
 
-          
-          <br>
-        </div>
-      </div><br>
 
-    <!-- End Left Column -->
-    </div>
 
-    <script>
+
+
+
+
+
+<script>
  function saySubmit(){
 
   
@@ -271,7 +288,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   //declare input variable
   var txtName = document.getElementById("txtName");
   var txtGred = document.getElementById("txtGred");
-  var txtSkim = document.getElementById("txtSkim");
   var txtIc = document.getElementById("txtIc");
   var txtGaji = document.getElementById("txtGaji");
   var txtElaun = document.getElementById("txtElaun");
@@ -332,7 +348,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
   var name = txtName.value;
   var gred = txtGred.value;
-  var skim = txtSkim.value;
   var bulanbulan = txtBulan.value;
   var ic = txtIc.value;
   var Gaji = parseFloat(txtGaji.value);
@@ -947,7 +962,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
    {
      Bulan5 = "Januari";
    }
-   skimgred = skim + " " + gred;
 
   txtOutputKgtkewangan1.value = kgtkewangan1;
   txtOutputKgtkewangan2.value = kgtkewangan2;
@@ -975,7 +989,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   txtOutputLem2.value = Lem2;
   txtOutputLem3.value = TarikhBulan;
   txtOutputName.value = name;
-  txtOutputGred.value = skimgred;
+  txtOutputGred.value = gred;
   txtOutputIc.value = ic;
   txtOutputKetidakhadiran.value = Ketidakhadiran;
   txtOutputEmolumen.value = Emolumen;
@@ -995,11 +1009,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 }
 </script>
 
-    <!-- Right Column -->
-    <div class="w3-twothird">
-    
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        
+
+
+
+
+
 
     <p style="color:red; font-size:16px;">Ruangan ini diisi secara automatik</p>
        
@@ -1227,29 +1241,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
   
  </form>
-</div>
 
 
-    <!-- End Right Column -->
-    </div>
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
-</div>
-
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+      
 
 </body>
-</html
-
+</html>

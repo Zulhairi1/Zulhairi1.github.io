@@ -29,13 +29,16 @@ table,td{
   border: 3px solid black;
   width: 50%; 
 }
+.table2,.td2,.tr2{
+  border: 0px solid black;
+  width: 40%; 
+}
 
 p1{
   color: red;
 }
 
-body {padding:30px}
-.print-area {border:1px solid red;padding:1em;margin:0 0 1em}
+
 </style>
 <title>Kalkulator Dasar Pemisah</title>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -54,41 +57,42 @@ body {padding:30px}
 <br><br><br><br>
 <center>
  <!--Heading untuk Kalkulator Exit Policy-->
-<table class="table1">
-	<center>
-	<td class="td1" colspan="3">
- <h2 align="center">KALKULATOR DASAR PEMISAH</h2>
+<table >
+  <center>
+ <img src="jata.png" alt="Jata Negara" width="170" height="120"><h2 align="center"  >Kalkulator Simulasi Hukuman Tatatertib</h2>
 <!--Heading untuk Maklumat Pegawai-->
  <h3  align="center">Maklumat Pegawai</h3>
-</td>
+
+ <hr class="w3-border-black" style="margin:auto;width:50%">
+
 </center>
 </table>
 <br>
  <!--Jadual Maklumat Pegawai-->
  <p style="color:red; font-size:16px;">* Ruangan ini adalah mandatori untuk diisi</p>
  <form id="form" name="myForm" onsubmit="return saySubmit()">
-  <table border="1" bgcolor="#dfe5eb">
-    <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+  <table class="table2">
+    <tr class="tr2">
+      <td class="td2" align="left"  width="347" height="20">
          Nama <p1>* </p1>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2"class="td2" colspan="3"  width="385" height="20">
          <input type = "text" id = "txtName" width="555" maxlength="200" size="40"/> <br>
       </td>
     </tr>
-     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+     <tr class="tr2">
+      <td class="td2"align="left"  width="347" height="20">
         <label>No Kad Pengenalan <p1>* </p1><br> </label>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2"colspan="3"  width="385" height="20">
          <input type = "text" id = "txtIc" maxlength="14" width="555" maxlength="200" size="40" placeholder="000000-00-0000"/> <br>
       </td>
     </tr>
     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"align="left"  width="347" height="20">
         <label>Skim<p1>* </p1> <br> </label>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2"colspan="3"  width="385" height="20">
          <select  id="txtSkim">
               <option value="A">A</option>
               <option value="B">B</option>
@@ -121,10 +125,10 @@ body {padding:30px}
       </td>
     </tr>
      <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2" align="left"  width="347" height="20">
           <label for="gred">Gred<p1>* </p1></label>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2"colspan="3"  width="385" height="20">
           <select  id="txtGred">
               <option value="1"> 1</option>
               <option value="2"> 2</option>
@@ -193,26 +197,26 @@ body {padding:30px}
       </td>
     </tr>
     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"align="left"  width="347" height="20">
          <p>Status<p1>* </p1></p> <p style="color:red; font-size:11px;" >Memangku Gred XXX atau KUP </p>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2"colspan="3"  width="385" height="20">
          <input type = "text" width="555" maxlength="200" size="40"/> <br>
       </td>
     </tr>
     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"align="left"  width="347" height="20">
          Unit/ Jabatan/ Kementerian: <p1>* </p1>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2"colspan="3"  width="385" height="20">
         <textarea id="txtJab" rows="4" cols="50" placeholder="Jabatan Perkhidmatan Awam"></textarea>
       </td>
     </tr>
      <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"align="left"  width="347" height="20">
          Tarikh Lahir: <p1>* </p1>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2"colspan="3"  width="385" height="20">
          <input type = "text" id="txtLahir1"  maxlength="2" size="2" placeholder="00">
                 &nbsp;/
         <input type = "text" id="txtLahir2"  maxlength="2"  size="2" placeholder="00">
@@ -221,10 +225,10 @@ body {padding:30px}
       </td>
     </tr>
     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"align="left"  width="347" height="20">
          Tarikh Mula Berkhidmat: <p1>* </p1>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2"colspan="3"  width="385" height="20">
          <input type = "text" id="txtKhid1"  maxlength="2" size="2" placeholder="00">
                 &nbsp;/
         <input type = "text" id="txtKhid2"  maxlength="2" size="2" placeholder="00">
@@ -233,10 +237,10 @@ body {padding:30px}
       </td>
     </tr>
      <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"align="left"  width="347" height="20">
          Umur Persaraan <p1>* </p1>
       </td>
-      <td  bgcolor="#dfe5eb" width="385" height="20" colspan="2">
+      <td   class="td2"width="385" height="20" colspan="2">
             
 
 
@@ -250,29 +254,29 @@ body {padding:30px}
       </td>
     </tr>
     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"align="left" width="347" height="20">
          Cuti Tanpa Gaji (Maksima 360 Hari)<p1>* </p1>
       </td>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20" colspan="2">
+      <td class="td2"align="left"  width="347" height="20" colspan="2">
          <input type = "text" id="txtCutiTanpa" placeholder="0" >
       </td>
       
     </tr>
     
     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"align="left"  width="347" height="20">
          Gantian Cuti Rehat (Maksima 150 Hari) <p1>* </p1>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2"colspan="3"  width="385" height="20">
          <input type = "text" id="txtCutiRehat" maxlength="3" placeholder="0" >
               
       </td>
     </tr>
     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"align="left"  width="347" height="20">
          Tarikh Dijangka Tamat Perkhidmatan: <p1>* </p1>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2"colspan="3"  width="385" height="20">
          <input type = "text" id="txtTamat1"  maxlength="2" placeholder="00" size="2">
                 &nbsp;/
         <input type = "text" id="txtTamat2"  maxlength="2" placeholder="00" size="2">
@@ -281,10 +285,10 @@ body {padding:30px}
       </td>
     </tr>
     <tr>
-      <td align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"align="left"  width="347" height="20">
          Gaji Akhir Diterima: <p1>* </p1>
       </td>
-      <td colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2"colspan="3" width="385" height="20">
          RM <input type = "text" id="txtGaji"  placeholder="0000" >  
       </td>
     </tr>
@@ -906,9 +910,6 @@ function printPage(id)
 
     </tr>
 
-</table>
-<br><br>
-<table>
     <tr>
       <td bgcolor="#3874d6"colspan="6" >
       <font face="Verdana" size="3" ><center> <b> FAEDAH PERSARAAN DI BAWAH DASAR PEMISAH </b></center></font>
@@ -959,10 +960,7 @@ function printPage(id)
      
       
     </tr>
-  </table>
 
-  <br>
-  <table>
     <tr>
       <td bgcolor="#04c22a"colspan="6">
       <font face="Verdana" size="3" ><center> <b> FAEDAH PERSARAAN ATAS SEBAB KESIHATAN </b></center></font>
@@ -1030,7 +1028,10 @@ function printPage(id)
    
 
 
- </table>
+</table>
+<br><br>
+
+
 </form>
 
        </div>

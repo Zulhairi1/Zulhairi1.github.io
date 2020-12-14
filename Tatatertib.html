@@ -2,19 +2,26 @@
 <!DOCTYPE html>
 <html>
  <style>
-  .button {
-  background-color: #4CAF50; /* Green */
-  border: none;
+
+  .bgimg {
+    background-image: url('gry.jpg');
+    min-height: 1000%;
+    background-position: center;
+    background-size: cover;
+}
+ input[type=button] {
+  background-color: #498ab3;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  float: center;
 }
 
-.button1 {font-size: 10px;background-color: #008CBA;}
+input[type=button]:hover {
+  background-color: #45a049;
+}
 
 
 table {
@@ -31,12 +38,11 @@ table,td{
   width: 50%; 
 }
 .table2,.td2,.tr2{
-  border: 3px solid black;
+  border: 0px solid black;
   width: 40%; 
 }
 
-body {padding:30px}
-.print-area {border:1px solid red;padding:1em;margin:0 0 1em}
+
 </style>
 <title>Kalkulator Simulasi Hukuman Tatatertib</title>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -44,7 +50,7 @@ body {padding:30px}
 
 
 <body >
-
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-black">
   <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
     <div class="w3-col s3">
@@ -71,28 +77,28 @@ body {padding:30px}
 <br><br>
  <!--Jadual Maklumat Pegawai-->
  <form id="form" name="myForm" onsubmit="return saySubmit()">
-  <table class="table2" border="1" bgcolor="#dfe5eb">
+  <table class="table2" border="1" >
     <tr class="tr2">
-      <td class="td2"align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"align="left"  width="347" height="20">
          Nama 
       </td>
-      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3"  width="385" height="20">
          <input type = "text" id = "txtName" width="555" maxlength="200" size="40"/> <br>
       </td>
     </tr>
      <tr class="tr2">
-      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2" align="left"  width="347" height="20">
         <label>No Kad Pengenalan <br> </label>
       </td>
-      <td class="td2" class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         <input type = "text" id = "txtIc" maxlength="14" width="555" maxlength="200" size="40" placeholder="000000-00-0000"/> <br>
+      <td class="td2" class="td2" colspan="3"  width="385" height="20">
+         <input type = "text" id = "txtIc" maxlength="14" width="555" size="40" maxlength="200" size="40" placeholder="000000-00-0000"/> <br>
       </td>
     </tr>
     <tr class="tr2">
-      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2" align="left"  width="347" height="20">
         <label>Skim <br> </label>
       </td>
-      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3" size="40" width="385" height="20">
          <select  id="txtSkim">
               <option value="A">A</option>
               <option value="B">B</option>
@@ -125,10 +131,10 @@ body {padding:30px}
       </td>
     </tr>
      <tr class="tr2">
-      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2" align="left"  width="347" height="20">
           <label for="gred">Gred</label>
       </td>
-      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3"  width="385" height="20">
           <select  id="txtGred">
               <option value="1"> 1</option>
               <option value="2"> 2</option>
@@ -197,10 +203,10 @@ body {padding:30px}
       </td>
     </tr>
      <tr class="tr2">
-      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2" align="left"  width="347" height="20">
          Tarikh Lembaga Tatatertib: 
       </td>
-      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3"  width="385" height="20">
          <input type = "text" id="txtLem1"  maxlength="2" size="2" placeholder="00">
                 &nbsp;/
         <input type = "text" id="txtLem2"  maxlength="2"  size="2" placeholder="00">
@@ -209,45 +215,45 @@ body {padding:30px}
       </td>
     </tr>
      <tr class="tr2">
-      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2" align="left"  width="347" height="20">
         TPG 
       </td>
-      <td  class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td  class="td2" colspan="3"  width="385" height="20">
             
 
 
             <select id="txtBulan">
-              <option value="Januari">January</option>
+              <option value="Januari">Januari</option>
               <option value="April">April</option>
-              <option value="Julai">July</option>
-              <option value="Oktober">October</option>
+              <option value="Julai">Julai</option>
+              <option value="Oktober">Oktober</option>
              </select>
               
       </td>
     </tr>
     <tr class="tr2">
-      <td class="td2"  align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2"  align="left"  width="347" height="20">
          Gaji Pokok: 
       </td>
-      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         RM <input type = "text" id="txtGaji"  value="0" >  
+      <td class="td2" colspan="3"  width="385" height="20">
+         RM <input type = "text" id="txtGaji"  placeholder="0" size="10" >  
       </td>
     </tr>
 
     <tr class="tr2">
-      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2" align="left"  width="347" height="20">
          Elaun: 
       </td>
-      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         RM <input type = "text" id="txtElaun"  value="0" >  
+      <td class="td2" colspan="3"  width="385" height="20">
+         RM <input type = "text" id="txtElaun" size="10" placeholder="0" >  
       </td>
     </tr>
      <form action = "" id="result">
      <tr class="tr2">
-      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2" align="left"  width="347" height="20">
          Emolumen: 
       </td>
-      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
+      <td class="td2" colspan="3"  width="385" height="20">
          RM <input type = "text" id = "txtOutputEmolumen" size="10" disabled/> 
 
       </td>
@@ -255,20 +261,20 @@ body {padding:30px}
   </form>
     
     <tr class="tr2">
-      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2" align="left"  width="347" height="20">
          Gaji Minimum 
       </td>
-      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-        RM <input type = "text" id="txtCutiRehat" maxlength="8" value="0" >
+      <td class="td2" colspan="3" width="385" height="20">
+        RM <input type = "text" id="txtCutiRehat" size="10" maxlength="8" placeholder="0" >
               
       </td>
     </tr>
     <tr class="tr2">
-      <td class="td2" align="left" bgcolor="#dfe5eb" width="347" height="20">
+      <td class="td2" align="left"  width="347" height="20">
          Jumlah Ketidakhadiran: 
       </td>
-      <td class="td2" colspan="3" bgcolor="#dfe5eb" width="385" height="20">
-         Hari <input type = "text" id="txtKetidakhadiran"  value="0" >  
+      <td class="td2" colspan="3" width="385" height="20">
+         Hari <input type = "text" id="txtKetidakhadiran"  size="10" placeholder="0" >  
       </td>
     </tr>
 
@@ -931,7 +937,7 @@ body {padding:30px}
   {
     Bulan1 = "April";
     Bulan2 = "Julai";
-    Bulan3 = "October";
+    Bulan3 = "Oktober";
     Bulan4 = "Januari";
   }
   else if(bulanbulan == "April")
@@ -974,22 +980,22 @@ body {padding:30px}
    }
    skimgred = skim + " " + gred;
 
-  txtOutputKgtkewangan1.value = kgtkewangan1;
-  txtOutputKgtkewangan2.value = kgtkewangan2;
-  txtOutputKgtkewangan3.value = kgtkewangan3;
-  txtOutputKgtkewangan4.value = kgtkewangan4;
-  txtOutputKgtkewangan5.value = kgtkewangan5;
-  txtOutputKgtkewangan6.value = kgtkewangan6;
-  txtOutputKgtkewangan7.value = kgtkewangan7;
-  txtOutputKgtkewangan8.value = kgtkewangan8;
-  txtOutputKgtkewangan9.value = kgtkewangan9;
-  txtOutputKgtkewangan10.value = kgtkewangan10;
-  txtOutputKgtkewangan11.value = kgtkewangan11;
-  txtOutputKgtkewangan12.value = kgtkewangan12;
-  txtOutputKgtkewangan13.value = kgtkewangan13;
-  txtOutputKgt.value = kgt;
-  txtOutputKgt2.value = kgt2;
-  txtOutputKgt3.value = kgt3;
+  txtOutputKgtkewangan1.value = kgtkewangan1.toFixed(2);
+  txtOutputKgtkewangan2.value = kgtkewangan2.toFixed(2);
+  txtOutputKgtkewangan3.value = kgtkewangan3.toFixed(2);
+  txtOutputKgtkewangan4.value = kgtkewangan4.toFixed(2);
+  txtOutputKgtkewangan5.value = kgtkewangan5.toFixed(2);
+  txtOutputKgtkewangan6.value = kgtkewangan6.toFixed(2);
+  txtOutputKgtkewangan7.value = kgtkewangan7.toFixed(2);
+  txtOutputKgtkewangan8.value = kgtkewangan8.toFixed(2);
+  txtOutputKgtkewangan9.value = kgtkewangan9.toFixed(2);
+  txtOutputKgtkewangan10.value = kgtkewangan10.toFixed(2);
+  txtOutputKgtkewangan11.value = kgtkewangan11.toFixed(2);
+  txtOutputKgtkewangan12.value = kgtkewangan12.toFixed(2);
+  txtOutputKgtkewangan13.value = kgtkewangan13.toFixed(2);
+  txtOutputKgt.value = kgt.toFixed(2);
+  txtOutputKgt2.value = kgt2.toFixed(2);
+  txtOutputKgt3.value = kgt3.toFixed(2);
   txtOutputBulan1.value = Bulan1;
   txtOutputBulan2.value = Bulan2;
   txtOutputBulan3.value = Bulan3;
@@ -1256,6 +1262,6 @@ body {padding:30px}
 
 
       
-
+</div>
 </body>
 </html>
